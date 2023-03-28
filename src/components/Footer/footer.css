@@ -1,0 +1,25 @@
+.mainFooter_image img {
+  width: 190px;
+}
+.mainFooter_copyright {
+  display: flex;
+  position: relative;
+  top: 4em;
+}
+.footerExplore span {
+  font-weight: 500;
+  cursor: pointer;
+}
+.footerInputField {
+  width: 60%;
+}
+.footerInputField input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3em;
+  text-indent: 10px;
+}
+.footerInputBox p {
+  font-weight: 500;
+}

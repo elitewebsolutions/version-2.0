@@ -1,0 +1,40 @@
+.pricingBox {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2em 0em;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  /* width: 100vh; */
+  top: 0;
+}
+.pricingBox1 {
+  padding: 2em 0em;
+  position: relative;
+}
+.pricingBtnDown {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 20px);
+  padding-bottom: 0.4em;
+}
+.pricingTabl .row > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.fullWidth {
+  width: 100%;
+}
+.pricingGarentyBox {
+  height: 47.5vh;
+}
+.pricingTable p {
+  font-size: 18px;
+}
+.pricingGarentyBox span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.subText {
+  font-size: 16px !important;
+}
