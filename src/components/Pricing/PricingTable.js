@@ -126,7 +126,7 @@ function PricingTable() {
                     <h2>Ready to take things to the next level?</h2>
                     <div className="ServiceEndButton mt-5">
                       <a
-                        href="#"
+                        href="/"
                         className="btn1 btn-sm btn--primary undefined btn--medium"
                       >
                         Get Started
