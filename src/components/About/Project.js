@@ -23,7 +23,7 @@ function Project({ image1, content1, image2, content2 }) {
                 <div className="mt-5">
                   <a
                     className="btn1 btn-sm undefined btn--primary btn--medium"
-                    href="#"
+                    href="/portfolio"
                   >
                     View our work
                   </a>
@@ -39,7 +39,7 @@ function Project({ image1, content1, image2, content2 }) {
                   <div className="mt-5">
                     <a
                       className="btn1 btn-sm undefined btn--primary btn--medium"
-                      href="#"
+                      href="/portfolio"
                     >
                       View our work
                     </a>
