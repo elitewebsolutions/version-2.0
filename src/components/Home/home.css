@@ -1,56 +1,103 @@
 .serviceBtnHomePage {
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-
-
-.homeImageBox {
-  width: 70% !important;
+.serviceBtnHomePage > a:first-child {
+  padding-right: 20px;
 }
 .homeImageBox img {
   width: 100%;
 }
-.serviceExpImg {
-  width: 100% !important;
+#root {
+  overflow-x: hidden;
 }
-
-
-.serviceDetImageBox {
+.homePage .homeContent h3 {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.homePage .homeContent h1 {
+  font-size: 90px;
+  line-height: 1;
+  font-weight: 800;
+}
+.homeContent {
   position: relative;
-  top: 0;
-  width: 86.6% !important;
+  z-index: 1;
+}
+.homeContent:before {
+  position: absolute;
+  content: "";
+  top: 33%;
+  right: 0;
+  height: 100%;
+  width: 60vw;
+  background: var(--primary);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 0;
+}
+.homeContent .homeContentInner {
+  position: relative;
+  z-index: 1;
+}
+.homeContent .homeContentInner p {
+  max-width: 430px;
+  width: 100%;
+  font-weight: 500;
+}
+.homeContent .serviceBtnHomePage {
+  position: relative;
+  z-index: 1;
+  padding-top: 25px;
+}
+.serviceDetailLanding {
+  position: relative;
+  margin: 0 !important;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.serviceDetailLanding:after {
+  position: absolute;
+  content: '';
+  top: 30px;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url(../../assets/service/service-banner-icon.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.serviceDetailLanding .homeContent:before,
+.serviceDetailLanding .serviceBtnHomePage {
+  display: none !important;
+}
+.serviceDetImageBox {
+  position: absolute;
+  top: -10em;
+  left: 0;
+  width: 25% !important;
 }
 .serviceDetImageBox img {
   width: 100%;
-  position: absolute;
-  top: -10em;
-  left: -6em;
 }
-
-
-.aboutImageBox {
-  position: relative;
-  top: 0;
-  left: 0;
+.homeImageBox {
+  text-align: center;
+}
+.homeImageBox img {
+  max-width: 80%;
+  width: 100%;
+  margin: auto;
 }
 .aboutImageBox img {
-  width: 60%;
+  width: 510px;
   display: block;
   position: absolute;
   z-index: -1;
-  top: -8.5em;
-  left: -9em;
-}
-.serviceImageBox {
-  position: relative;
   top: 0;
-  left: 0;
-}
-.serviceImageBox img {
-  width: 70%;
-  display: block;
-  position: absolute;
-  z-index: -1;
-  top: -6em;
+  left: -6em;
 }
 .serviceContentHome {
   position: relative;
@@ -59,94 +106,239 @@
 .serviceContentHome .serviceCoverHome {
   position: absolute;
   top: -50%;
+  left: 60%;
   transform: translateY(-30%);
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
-.servicePageHome .serviceContentDet{
+.servicePageHome .serviceContentDet {
   position: absolute;
   top: -50%;
-  transform: translateY(-30%);
+  transform: translateY(-45%);
   display: flex;
   justify-content: flex-start;
   width: 100%;
 }
-
-
-
-
 .serviceContentHome .serviceTitle {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 20em;
-  height: 20em;
+  width: 430px;
+  height: 430px;
   border-radius: 50%;
-  background: linear-gradient(120deg, #fcc1ffb2 20.69%, #b1fcf9c1 79.69%);
-  border: 2px solid rgb(60, 0, 255);
+  background: linear-gradient(135deg, #facdfe 0%, #d9dcfd 48%, #b5f9fa 100%);
+  padding: 40px;
+  z-index: 1;
 }
-.serviceDetBussinessTitle{
-  width: 20em;
-  height: 20em;
+.serviceContentHome .serviceCoverHome:after,
+.servicePageHome .serviceDetBussinessTitle:after {
+  position: absolute;
+  content: "";
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 250px;
+  background-image: url("../../assets/home/our-service-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+.servicePageHome .serviceDetBussinessTitle {
+  width: 430px;
+  height: 430px;
   border-radius: 50%;
-  background: linear-gradient(120deg, #fcc1ffb2 20.69%, #b1fcf9c1 79.69%);
+  background: linear-gradient(135deg, #facdfe 0%, #d9dcfd 48%, #b5f9fa 100%);
 }
-.norWordBreak{
+
+.serviceContentHome .serviceTitle p {
+  margin-bottom: 0;
+}
+.norWordBreak {
   position: relative;
-  left:30%;
+  left: 20%;
   height: 100%;
   display: flex;
   margin: 0 auto;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   word-wrap: normal;
-  max-width: 800px;
-  width: 1000px;
+  max-width: 900px;
+  width: 100%;
+  min-width: 900px;
 }
-
-.serviceHomeCardImg img {
-  width: 4em;
-  height: 4em;
+.norWordBreak h3 {
+  font-size: 50px;
+  font-weight: 800;
+}
+.norWordBreak p {
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 700px;
+  width: 100%;
+}
+.serviceHomeCardImg {
+  width: 120px;
+  height: 120px;
   background-color: white;
   padding: 1em;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
 }
-
-.rightBar {
-  border-right: 1px solid rgba(128, 128, 128, 0.712);
+.rightBar .serviceHomeCardBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 25px;
+  padding-top: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+.rightBar .serviceHomeCardBox .serviceHomeCard {
+  width: calc(25% - 20px);
+  padding: 50px 15px;
+}
+.rightBar .serviceHomeCardBox .serviceHomeCard:not(:last-child) {
+  border-right: 1px solid #e5d7e8;
 }
 .projectBoxImageHome img {
   width: 100%;
 }
 .review_title h2 {
-  background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  background: linear-gradient(
+    135deg,
+    rgb(250 205 254 / 80%) 0%,
+    rgb(217 220 253 / 80%) 51%,
+    rgb(181 249 250 / 80%) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3em;
+  margin-bottom: 0;
+  display: inline-block;
+  line-height: 1;
 }
-
+.serviceHomeCardBox h5 {
+  font-weight: 800;
+}
+.serviceHomeCardBox .serviceListContent p {
+  font-size: 16px;
+}
 .review_comments p {
   color: black;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
+  color: #111111;
+  text-transform: capitalize;
 }
 .ourRecentWorkHomeBox {
-  border-radius: 10px;
-  padding: 1em 10px;
+  position: relative;
+  border-radius: 12px;
+  padding: 45px 28px;
+  height: 320px;
 }
-
+.ourRecentWorkHomeBox h6 {
+  font-size: 28px;
+}
+.ourRecentWorkHomeBox .recentWorkButton {
+  position: absolute;
+  bottom: 45px;
+  right: 28px;
+}
+.ourRecentWorkHomeBox .recentWorkButton .visitSiteLink {
+  color: #fff !important;
+  padding: 15px 20px;
+  font-size: 15px;
+  border-radius: 3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+}
+.ourRecentWorkHomeBox .recentWorkButton .visitSiteLink img {
+  width: 16px;
+}
 .PartnerHomePage {
-  margin-top: 7em;
+  padding-top: 7em;
+  padding-bottom: 5em;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-
-.partnerLogo img {
-  width: 70%;
+.singlePartnerLogo img {
+  filter: grayscale(100%);
+  transition: 0.4s all ease-in-out;
 }
-
+.singlePartnerLogo img:hover {
+  filter: none;
+}
+.PartnerHomePage .partnerLogo .row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-top: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+}
+.PartnerHomePage.partnerAboutBlock .partnerLogo .row {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: auto auto auto auto auto;
+}
+.PartnerHomePage.partnerAboutBlock .partnerLogo .singlePartnerLogo {
+  width: 20%;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+.PartnerHomePage.partnerAboutBlock .partnerLogo .singlePartnerLogo img {
+  border: none;
+  width: 100%;
+  height: unset;
+  padding: 0;
+  max-width: 50px;
+}
+.PartnerHomePage.partnerAboutBlock .singlePartnerLogo .partnerLogo {
+  padding: 30px;
+}
+.PartnerHomePage .partnerLogo .singlePartnerLogo {
+  padding: 0;
+  flex: none;
+}
+.PartnerHomePage .partnerLogo .singlePartnerLogo img {
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 40px 50px;
+  width: 33.33%;
+  height: 130px;
+  object-fit: contain;
+}
+.ProjectRatingPageHome {
+  padding-top: 20px;
+}
+.homeRecentWork {
+  padding-top: 100px;
+}
+.homeRecentWork .ourWorkrecentHome {
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.homeRecentWork .recentWorkListing {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.homeRecentWork .recentWorkListing .singleRecentWork {
+  padding: 5px;
+}
 .serviceIconBox {
   cursor: pointer;
   display: grid;
@@ -154,52 +346,426 @@
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
-  background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  background: linear-gradient(135deg, #facdfe 0%, #d9dcfd 48%, #b5f9fa 100%);
 }
 .serviceIconBox img {
   width: 1.5em;
 }
-
+.homeAboutSection {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  margin: 0;
+}
 
 /* brand service */
-.brandBox{
-  gap: 1em;
-  overflow: scroll;
+.brandBox {
   overflow: hidden;
   width: 100%;
-  animation: animate 13s linear  infinite 
-;
+}
+.serviceBrand {
+  position: relative;
+}
+.brandBox .brandItems p {
+  animation-name: rightToLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
 
-.brandItems span{
+.marquee span {
   display: inline-block;
-  min-width: 10em;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.378);
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 
-.ServiceEndButton{
+.brandItems span.spacing {
+  display: inline-block;
+  padding: 0 20px;
+}
+.ServiceEndButton {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
+}
+.ProjectHomePage {
+  padding-top: 110px;
+}
+.ProjectHomePage .projectHomePage.left-spacing {
+  padding-left: calc((100vw - 1380px) / 2);
+  padding-right: 50px;
+}
+.ProjectHomePage .projectHomePage.right-spacing {
+  padding-left: 50px;
+  padding-right: calc((100vw - 1380px) / 2);
+}
+.ProjectHomePage .projectHomePage p {
+  max-width: 530px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.ProjectHomePage .projectHomePage .btn--medium {
+  min-width: 200px;
+}
+.ProjectHomePage .projectHomePage h2 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.homeRecentWork .ourWorkrecentHome h2 {
+  margin-bottom: 20px;
+}
+.homeRecentWork .ourWorkrecentHome .ourWorkInner {
+  max-width: 450px;
+  margin: auto;
+  width: 100%;
+}
+.homeRecentWork .ourWorkListing {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+.PartnerHomePage .partnerTitle {
+  position: relative;
+}
+.PartnerHomePage .partnerTitle .partnerInnerTitle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #facdfe 0%, #d9dcfd 48%, #b5f9fa 100%);
+  padding: 40px;
+  z-index: 1;
+}
+.PartnerHomePage .partnerTitle:after {
+  position: absolute;
+  content: "";
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 250px;
+  background-image: url("../../assets/home/our-service-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.PartnerHomePage .partnerTitle .partnerInnerTitle {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 1700px) {
+  .serviceDetImageBox {
+    top: 0;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .PartnerHomePage {
+    padding-top: 4em;
+    padding-bottom: 3em;
+  }
+  .homePage .homeContent h1 {
+    font-size: 80px;
+  }
+  .homeRecentWork {
+    padding-top: 60px;
+  }
+  .detailPageServices .serviceHomeCardBox .serviceHomeCard {
+    width: calc(33.33% - 20px);
+  }
+  .PartnerHomePage .partnerLogo .singlePartnerLogo img {
+    padding: 20px 40px;
+  }
+  .ProjectHomePage .projectHomePage.right-spacing {
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+  .ProjectHomePage .projectHomePage.left-spacing {
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  .homeContent .homeContentInner h1.w-50 {
+    width: 75% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .PartnerHomePage .partnerTitle {
+    padding-bottom: 30px;
+    max-width: 460px;
+    margin: auto;
+    width: 100%;
+  }
+  .PartnerHomePage .partnerTitle .partnerInnerTitle {
+    margin: auto;
+  }
+  .PartnerHomePage {
+    padding-top: 3em;
+  }
+  .ProjectHomePage .projectHomePage.right-spacing {
+    padding-left: 20px;
+  }
+  .ProjectHomePage .projectHomePage.left-spacing {
+    padding-right: 20px;
+  }
+  .rightBar .serviceHomeCardBox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .serviceContentHome .serviceCoverHome {
+    left: unset;
+    right: 50px;
+  }
+  .homePage .homeContent h1 {
+    font-size: 70px;
+  }
+  .homePage .homeContent h3 {
+    font-size: 34px;
+  }
+  .ProjectHomePage {
+    padding-top: 50px;
+  }
+  .ProjectHomePage .projectHomePage h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .PartnerHomePage .partnerLogo .singlePartnerLogo img {
+    padding: 20px 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .detailPageServices .serviceHomeCardBox .serviceHomeCard:last-child {
+    border-right: none !important;
+  }
+  .PartnerHomePage.partnerAboutBlock .partnerLogo .singlePartnerLogo img {
+    border: none !important;
+  }
+  .ProjectHomePage .col {
+    flex: unset;
+  }
+  .PartnerHomePage .partnerLogo .singlePartnerLogo img {
+    padding: 10px 30px;
+  }
+  .PartnerHomePage .partnerTitle .partnerInnerTitle {
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+  }
+  .PartnerHomePage .partnerTitle {
+    max-width: 420px;
+  }
+  .ProjectRatingPageHome.mt-5 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0;
+    margin-top: 0 !important;
+  }
+  .ProjectHomePage .projectHomePage {
+    padding: 30px 20px 10px !important;
+  }
+  .ProjectHomePage .projectHomePage .mt-5 {
+    margin-top: 25px !important;
+  }
+  .ProjectHomePage .projectHomePage p {
+    max-width: 100%;
+  }
+  .ProjectHomePage .reverse-project {
+    flex-direction: column-reverse;
+  }
+  .ProjectHomePage {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .serviceContentHome .serviceTitle {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+  }
+  .rightBar .serviceHomeCardBox .serviceHomeCard:not(:last-child) {
+    border: none;
+  }
+  .rightBar .serviceHomeCardBox .serviceHomeCard:nth-child(odd) {
+    border-right: 1px solid #e5d7e8;
+  }
+  .rightBar .serviceHomeCardBox .serviceHomeCard {
+      width: calc(50% - 20px);
+      padding: 20px 15px;
+  }
+  .homeImageBox {
+    padding-top: 30px;
+  }
+  .homeContent:before {
+    display: none;
+  }
+  .homeContent .serviceBtnHomePage {
+    padding-top: 0;
+  }
+  .homePage .homeContent h1 {
+    font-size: 55px;
+  }
+  .homePage .homeContent h3 {
+    font-size: 30px;
+  }
+  .aboutImageBox img {
+    width: 280px;
+    bottom: -80px;
+    right: -6em;
+    opacity: 0.2;
+    left: unset;
+    top: unset;
+  }
+  .homeAboutSection {
+    padding-top: 80px;
+  }
+  .rightBar .serviceHomeCardBox {
+    padding-top: 150px;
+  }
+  .homeRecentWork {
+    padding-top: 70px;
+  }
+  .serviceContentHome .serviceCoverHome {
+    left: 50%;
+    right: unset;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 992px) {
+
+}
+@media screen and (max-width: 767px) {
+  .PartnerHomePage.partnerAboutBlock .partnerLogo .singlePartnerLogo {
+    width: 33.33%;
+  }
+  .aboutTopBlock .homeContent h1 {
+    font-size: 50px;
+  }
+  .homeImageBox1 img {
+    width: 100%;
+  }
+  .homeContent .homeContentInner h1.w-50 {
+    width: 100% !important;
+  }
+  .PartnerHomePage .partnerLogo .singlePartnerLogo img {
+    width: 50%;
+    padding: 10px 20px;
+  }
+  .PartnerHomePage .partnerLogo .singlePartnerLogo img:last-child {
+    border-left: 1px solid #e3e3e3;
+  }
+  .PartnerHomePage .partnerTitle .partnerInnerTitle {
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+  }
+  .PartnerHomePage .partnerTitle {
+    max-width: 370px;
+  }
+  .homeRecentWork .recentWorkListing .singleRecentWork {
+    padding: 10px 0;
+  }
+  .homeRecentWork {
+    padding-top: 30px;
+  }
+  .ourRecentWorkHomeBox .recentWorkButton a {
+    font-size: 14px !important;
+    padding: 12px 10px !important;
+  }
+  .ourRecentWorkHomeBox img {
+    width: 130px;
+  }
+  .ourRecentWorkHomeBox .recentWorkButton {
+    bottom: 20px;
+    right: 20px;
+    grid-gap: 10px !important;
+  }
+  .ourRecentWorkHomeBox {
+    padding: 25px 18px;
+    height: 270px;
+  }
+  .ourRecentWorkHomeBox h6 {
+    font-size: 22px;
+  }
+  .ProjectHomePage .projectHomePage .btn--medium {
+    min-width: 180px;
+  }
+  .ProjectHomePage .projectHomePage h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .ProjectHomePage .projectHomePage p {
+    font-size: 16px;
+  }
+  .rightBar .serviceHomeCardBox .serviceHomeCard {
+      width: 100%;
+      padding: 30px 15px;
+      border-right: none !important;
+      margin: 0 !important;
+  }
+  .rightBar .serviceHomeCardBox .serviceHomeCard:not(:last-child) {
+      border-bottom: 1px solid #e5d7e8;
+  }
+  .serviceBtnHomePage > a:first-child {
+    padding-right: 10px;
+  }
+  .serviceBtnHomePage > a:first-child img {
+    width: 42px;
+    height: 42px;
+  }
+  .aboutContent .gap-5 {
+    grid-gap: 15px !important;
+  }
+  .homeAboutSection {
+    padding-top: 70px;
+  }
+  .aboutImageBox img {
+    width: 220px;
+  }
+  .rightBar .serviceHomeCardBox {
+    padding-top: 120px;
+    grid-gap: 0;
+  }
+  .serviceContentHome .serviceTitle {
+    width: 350px;
+    height: 350px;
+  }
+  .PartnerHomePage {
+    padding-bottom: 30px;
+  }
+  .PartnerHomePage {
+    margin-top: 0 !important;
+  }
 }
 
 
 
-
-@keyframes animate {
-  0%{
-    transform: translateX(0%);
+@media screen and (max-width: 360px) {
+  .PartnerHomePage .partnerTitle .partnerInnerTitle {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
   }
-
-  50%{
-    transform: translateX(-30%);
-
-  }
-  100%{
-    transform: translateX(30%);
-
+  .serviceContentHome .serviceTitle {
+    width: 300px;
+    height: 300px;
   }
 }

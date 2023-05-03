@@ -1,6 +1,7 @@
 :root {
-  --primary: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
-  --btn-color: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  --primary: linear-gradient(135deg, #facdfe 0%,#d9dcfd 48%,#b5f9fa 100%);
+  --hoverprimary: linear-gradient(135deg, #b5f9fa 0%,#d9dcfd 48%,#facdfe 100%);
+  --btn-color: linear-gradient(135deg, #facdfe 0%,#d9dcfd 48%,#b5f9fa 100%);
 }
 
 .btn1,
@@ -22,6 +23,10 @@
 
 .btn--primary {
   background: var(--primary);
+  transition: 0.4s ease all;
+}
+.btn--primary:hover {
+  background-color: #e074ea;
 }
 
 .btn--outline {
@@ -34,12 +39,15 @@
 }
 
 .btn--medium {
-  padding: 10px 20px;
+  padding: 15px 20px;
   font-size: 15px;
   color: #000;
   border-radius: 3em;
-
-  font-weight: 510;
+  text-transform: uppercase;
+  font-weight: 700;
+  min-width: 190px;
+  text-align: center;
+  display: inline-block;
 }
 .btn--large {
   padding: 15px 50px;
@@ -58,7 +66,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .btn--medium {
+    min-width: 160px;
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 1073px) {
   .header-btn-none {

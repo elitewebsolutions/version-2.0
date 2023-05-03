@@ -1,25 +1,45 @@
-import React, { useEffect } from 'react'
-import AboutLanding from '../components/About/LandingPage'
-import TechnologyUsed from '../components/About/TechnologyUsed'
-import OurWorkCulture from '../components/About/WorkCulture'
-import Project from '../components/Home/Project'
-import ProjectRating from '../components/Home/ProjectRating'
+import React, { useEffect, useState } from 'react';
+import useContentful from "../useContentful";
+import AboutLanding from '../components/About/LandingPage';
+import TechnologyUsed from '../components/About/TechnologyUsed';
+import OurWorkCulture from '../components/About/WorkCulture';
+import Project from "../components/About/Project";
+import ProjectRating from '../components/Home/ProjectRating';
+
+
 function AboutPage(props) {
+    const [about, setAbout] = useState([]);
+    const { getAbout, getRating } = useContentful();
+    const [cta, setCta] = useState([]);
+    const [rating, setRating] = useState([]);
+    const [culture, setCulture] = useState([]);
+
 
     useEffect(() => {
         document.title = props.metaAbout
+        getAbout().then((res) => {
+            setAbout(res.items[0]?.fields)
+            setCta(res.items[0]?.fields?.refAboutCta1)
+            setCulture(res.items[0]?.fields?.ourWorkCulture)
+        });
+        getRating().then((res) => {
+            setRating(res);
+        })
         // eslint-disable-next-line
     }, [])
+
     return (
         <>
             <div className="content-wrapper">
-                <AboutLanding />
+                <AboutLanding image={about?.image} heading={about?.subHeading} />
             </div>
-            <Project />
-            <ProjectRating />
-            <TechnologyUsed />
+            <Project image1={about?.bannerFourImage} content1={about?.bannerFourContent} image2={about?.bannerFourImageTwo} content2={about?.bannerFourContentTwo} />
 
-            <OurWorkCulture />
+            <ProjectRating rating={rating?.items || []} />
+
+            <TechnologyUsed tech={about?.refAboutTechnologyMaster || []} />
+
+            <OurWorkCulture culture={culture} title={about?.titleWorkCulture} />
         </>
 
 

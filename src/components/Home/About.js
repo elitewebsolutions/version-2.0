@@ -1,12 +1,13 @@
 import React from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Container, Row, Col } from "react-bootstrap";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import box2 from "../../assets/home/home2.png";
-import { Button } from "../Button/Button";
 import "./home.css";
-function About() {
+import btn_arrow from "../../assets/btn-arrow.png";
+
+function About({ home }) {
   return (
-    <section className="homePage">
+    <section className="homeAboutSection">
       <div className="wrapper">
         <Container fluid className="p-0">
           <Row>
@@ -17,31 +18,33 @@ function About() {
             </Col>
             <Col lg={6}>
               <div className="aboutContent">
-                <div>
-                  <h2>About Us</h2>
-                  <p>
-                    Ut vitae erat tempus, venenatis augue eu, placerat libero.
-                    Nunc interdum ligula sapien. Proin scelerisque nisi orci, at
-                    vulputate ligula sollicitudin ut. Maecenas porttitor magna
-                    non dictum blandit. Etiam interdum nunc sit amet lectus
-                    commodo sodales.
-                  </p>
-                </div>
-                <div className="mt-4 d-flex gap-4 align-items-center">
-                  <div>
-                    <Button>OUR WORK</Button>
+                {home?.items?.map((item, index) => (
+                  <div key={index}>
+                    {documentToReactComponents(item.fields.secondBanner)}
                   </div>
+                ))}
+                {home?.items?.map((item, index) => (
+                  <div className="mt-5 d-flex gap-5 align-items-center">
+                    <div>
+                      <a
+                        className="btn1 btn-sm undefined btn--primary btn--medium"
+                        href={item.fields.secondButtonLink}
+                      >
+                        {item.fields.secondButton}
+                      </a>
+                    </div>
 
-                  <div
-                    className="serviceBtnHomePage d-flex gap-2 align-items-center"
-                    style={{ cursor: "pointer" }}
-                  >
-                    <span>
-                      <BsFillArrowRightCircleFill size={30} />
-                    </span>
-                    <span>OUR SERVICES</span>
+                    <div
+                      className="serviceBtnHomePage d-flex align-items-center"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <a href={item.fields.sideLink}>
+                        <img src={btn_arrow} className="img-size" alt="box" />
+                      </a>
+                      <a href={item.fields.sideLink}>{item.fields.sideText}</a>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </Col>
           </Row>

@@ -1,30 +1,31 @@
-.partnerLogo {
-  position: relative;
-  top: 0;
+.ContactFormPage .partnerLogo {
+  padding: 150px 0;
 }
 .contactFormImg img {
-  width: 80%;
-  height: 70vh;
-  filter: brightness(60%);
-  opacity: 0.7;
+  width: 100%;
+  height: 100%;
 }
 
 .rightPartContact {
   font-style: normal;
-  margin: 3em 1em;
+  margin: 0 1em;
 }
 .contactForm {
   width: 90%;
   margin: 0 auto;
 }
-.contactForm input {
+.contactForm input,
+.contactForm textarea {
   border: none;
   background-color: transparent;
-  border-bottom: 3px solid #d9d9d9;
-  margin-top: 2em;
+  border-bottom: 2px solid #d5d5d5;
+  margin-top: 50px;
   outline: none;
+  padding: 12px 0;
 }
-
+.contactForm textarea {
+  height: 140px;
+}
 .halfContact {
   display: flex;
   flex-wrap: wrap;
@@ -40,24 +41,155 @@
   width: 100%;
 }
 
-.ContactRoundBoxCover {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  z-index: 1 !important;
-  background-color: red !;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.ContactFormPage {
+  position: relative;
+  margin-top: 0;
 }
-.contacFormCoverTitle {
+.ContactFormPage .contacFormCoverTitle {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 20em;
-  height: 20em;
+  width: 430px;
+  height: 430px;
   border-radius: 50%;
-  background: linear-gradient(120deg, #fcc1ffb2 20.69%, #b1fcf9c1 79.69%);
+  background: linear-gradient(
+    135deg,
+    rgba(134, 235, 236, 0.8) 0%,
+    rgba(181, 186, 242, 0.8) 40%,
+    rgba(224, 116, 234, 0.8) 100%
+  );
+  padding: 40px;
+  z-index: 1;
+}
+.ContactFormPage .col-lg-4,
+.ContactFormPage .col-lg-8 {
+  display: flex;
+  align-items: center;
+}
+.ContactFormPage .contactFormImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32%;
+  height: 100%;
+  z-index: -1;
+}
+.ContactFormPage .ContactRoundBox {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ContactFormPage .phone-number img,
+.ContactFormPage .email-address img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.ContactFormPage .phone-number,
+.ContactFormPage .email-address {
+  font-weight: bold;
+  font-size: 20px;
+}
+.ContactFormPage .contacFormCoverTitle > span {
+  padding-bottom: 13px;
+}
+.ContactFormPage .contacFormCoverTitle .call-icon {
+  padding-bottom: 30px;
+}
+.ContactFormPage .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ContactFormPage .social-icons a {
+  display: block;
+}
+.ContactFormPage .social-icons a img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+.content-wrapper.contactContentWrapper {
+  background-image: url('../../assets/contact/contact-page-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+}
+.ContactFormFieldBox p {
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .ContactFormPage .contactFormImg {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ContactFormPage .contactFormImg {
+    height: 550px;
+    width: 100%;
+  }
+  .ContactFormPage .contactFormImg img {
+    object-fit: cover;
+  }
+  .ContactFormPage .ContactRoundBox {
+      height: 550px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .ContactFormPage .col {
+    flex: unset !important;
+  }
+  .ContactFormPage .partnerLogo {
+    padding: 70px 0;
+  }
+  .rightPartContact {
+    margin: 0 !important;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .ContactFormPage .contacFormCoverTitle {
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+  }
+  .halfContact {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ContactFormPage .contacFormCoverTitle {
+    width: 360px;
+    height: 360px;
+    padding: 20px;
+  }
+  .contactForm input, .contactForm textarea {
+    margin-top: 25px !important;
+  }
+  .ContactFormPage .phone-number, .ContactFormPage .email-address {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .halfContact .halfWidth {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .ContactFormPage .contacFormCoverTitle {
+    width: 300px;
+    height: 300px;
+  }
 }

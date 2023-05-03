@@ -1,59 +1,77 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ser1 from "../../assets/home/ser1.png";
-import { Button } from "../Button/Button";
 import "./home.css";
-function Project() {
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+function Project({ home }) {
   return (
     <section className="ProjectHomePage">
       <div className="wrapper1">
         <Container fluid className="p-0">
           <Row className="align-items-center">
-            <Col lg={6}>
-              <div className="projectBoxImageHome">
-                <img src={ser1} className="img-size" alt="box" />
-              </div>
-            </Col>
-            <Col lg={6}>
-              <div className="projectHomePage w-75 mx-auto">
-                <div>
-                  <h2>Web Development & Data Science</h2>
-                  <p>
-                    Ut vitae erat tempus, venenatis augue eu, placerat libero.
-                    Nunc interdum ligula sapien. Proin scelerisque nisi orci, at
-                    vulputate ligula sollicitudin ut. Maecenas porttitor magna
-                    non dictum blandit. Etiam interdum nunc sit amet lectus
-                    commodo sodales.
-                  </p>
-                  <div className=" mt-4">
-                    <Button>View Our Work</Button>
-                  </div>
+            <Col className="col-lg-6 col-xl-7">
+              {home?.items?.map((item, index) => (
+                <div className="projectBoxImageHome" key={index}>
+                  <img
+                    key={index}
+                    src={item.fields.bannerFourImage?.fields.file.url}
+                    className="img-size"
+                    alt="box"
+                  />
                 </div>
+              ))}
+            </Col>
+            <Col className="col-lg-6 col-xl-5">
+              <div className="projectHomePage right-spacing">
+                {home?.items?.map((item, index) => (
+                  <div key={index}>
+                    {documentToReactComponents(item.fields.bannerFourContent)}
+
+                    <div className="mt-5">
+                      <a
+                        className="btn1 btn-sm undefined btn--primary btn--medium"
+                        href={item.fields.fourButtonLink}
+                      >
+                        {item.fields.fourButton}
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
             </Col>
           </Row>
-          <Row className="mt-5 align-items-center">
-            <Col lg={6}>
-              <div className="projectHomePage w-75 mx-auto">
-                <div>
-                  <h2>UI and UX Deign</h2>
-                  <p>
-                    Ut vitae erat tempus, venenatis augue eu, placerat libero.
-                    Nunc interdum ligula sapien. Proin scelerisque nisi orci, at
-                    vulputate ligula sollicitudin ut. Maecenas porttitor magna
-                    non dictum blandit. Etiam interdum nunc sit amet lectus
-                    commodo sodales.
-                  </p>
-                  <div className="mt-4">
-                    <Button>View Our Work</Button>
+          <Row className="mt-5 align-items-center reverse-project">
+            <Col className="col-lg-6 col-xl-5">
+              <div className="projectHomePage left-spacing">
+                {home?.items?.map((item, index) => (
+                  <div key={index}>
+                    <span>
+                      {documentToReactComponents(
+                        item.fields.bannerFourContentTwo
+                      )}
+                    </span>
+                    <div className=" mt-4">
+                      <a
+                        className="btn1 btn-sm undefined btn--primary btn--medium"
+                        href={item.fields.fourButtonLinkTwo}
+                      >
+                        {item.fields.fourButtonTwo}
+                      </a>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </Col>
-            <Col lg={6}>
-              <div className="projectBoxImageHome">
-                <img src={ser1} className="img-size" alt="box" />
-              </div>
+            <Col className="col-lg-6 col-xl-7">
+              {home?.items?.map((item, index) => (
+                <div className="projectBoxImageHome" key={index}>
+                  <img
+                    key={index}
+                    src={item.fields.bannerFourImageTwo?.fields.file.url}
+                    className="img-size"
+                    alt="box"
+                  />
+                </div>
+              ))}
             </Col>
           </Row>
         </Container>

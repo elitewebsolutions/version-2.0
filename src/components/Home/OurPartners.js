@@ -1,49 +1,52 @@
-import React from 'react'
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../../assets/home/partner.jpeg"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-function OurPartners() {
-    return (
-        <section className="PartnerHomePage ">
-            <div className="wrapper">
-                <Container fluid className="p-0">
-                    <Row >
-                        <Col lg={4}>
-                            <div className="partnerTitle">
-                                <h2>
-                                    Our Partners
-                                </h2>
-                                <p>
-                                    Etiam tristique dictum purus ut dignissim. Donec ac neque sit amet leo lobortis commodo eu at lectus.
-                                </p>
-                            </div>
-                        </Col>
-                        <Col lg={8}>
-                            <div className="partnerLogo">
-                                <Row style={{ textAlign: "right" }}>
-                                    {
-                                        [...new Array(9)].map((img, index) => {
-                                            return (
-                                                <Col lg={4} className="mb-4">
-                                                    <div className="partnerLogo">
-                                                        <img src={logo} alt="logo" />
-                                                    </div>
-                                                </Col>
-                                            )
-                                        })
-                                    }
-                                </Row>
-
-                            </div>
-                        </Col>
-
-                    </Row>
-
-                </Container>
-            </div>
-
-        </section>
-    )
+function OurPartners({ home }) {
+  const gallery = (item) => {
+    const galleryImage = item.fields.bannerPhotos?.map((image, key) => {
+      return (
+        <img
+          key={key}
+          src={image?.fields?.file?.url}
+          alt={image?.fields?.title}
+        />
+      );
+    });
+    return galleryImage;
+  };
+  return (
+    <section className="PartnerHomePage ">
+      <div className="wrapper">
+        <Container fluid className="p-0">
+          <Row className="justify-content-between align-items-center">
+            <Col xl={4}>
+              <div className="partnerTitle">
+                <div className="partnerInnerTitle">
+                  {home?.items?.map((item, index) => (
+                    <div key={index}>
+                      {documentToReactComponents(item.fields.bannerSix)}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Col>
+            <Col xl={7}>
+              <div className="partnerLogo">
+                <Row style={{ textAlign: "center" }}>
+                  {home?.items?.map((item, key) => (
+                    <React.Fragment key={key}>
+                      <Col className="singlePartnerLogo">{gallery(item)}</Col>
+                    </React.Fragment>
+                  ))}
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </section>
+  );
 }
 
-export default OurPartners
+export default OurPartners;

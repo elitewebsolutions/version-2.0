@@ -1,35 +1,34 @@
 import React from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import box from "../../assets/service/ser1.png";
 
-function ServiceDetailLanding() {
+import btn_gradient_arrow from "../../assets/btn-gradient-arrow.png";
+
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+function ServiceDetailLanding({ heading, image }) {
   return (
-    <section className="homePageDetailPage mb-5">
+    <section className="homePageDetailPage serviceDetailLanding">
       <div className="wrapper">
         <Container fluid className="p-0">
           <Row style={{ padding: "4em 0" }} className="flex-row-reverse">
-            <Col lg={8}>
+            <Col md={8}>
               <div className="homeContent">
-                <h3>Get customizable templates for your </h3>
-                <h1>For Mindful Brands</h1>
+                <div>{documentToReactComponents(heading)}</div>
               </div>
 
               <div
                 className="serviceBtnHomePage d-flex gap-2 align-items-center"
                 style={{ cursor: "pointer" }}
               >
-                <span>
-                  <BsFillArrowRightCircleFill size={30} />
-                </span>
+                <img src={btn_gradient_arrow} className="img-size" alt="box" />
                 <span>READ MORE</span>
               </div>
             </Col>
 
-            <Col lg={4}>
+            <Col md={4}>
               <div className="serviceDetImageBox">
-                <img src={box} className="img-size" alt="box" />
+                <img src={image} className="img-size" alt="box" />
               </div>
             </Col>
           </Row>

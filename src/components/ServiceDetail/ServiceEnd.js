@@ -1,22 +1,29 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Button } from "../Button/Button";
-function ServiceEnd() {
+
+function ServiceEnd({ content }) {
+  const fieldsArray = Object.values(content);
+
   return (
     <section className="serviceBrand">
       <div className="wrapper">
         <Container fluid className="p-0">
           <Row>
             <Col lg={12}>
-              <div className="serviceContain ">
-                <div className="text-center">
-                  <h2>
-                    Ready to take things <br /> to the next level?
-                  </h2>
-                </div>
-                <div className="ServiceEndButton mt-5 ">
-                  <Button>GET STARTED</Button>
-                </div>
+              <div className="serviceContain my-5">
+                {fieldsArray?.slice(0, 1)?.map((item, index) => (
+                  <div className="text-center mx-auto" key={index}>
+                    <h2>{item.serviceEndTitle}</h2>
+                    <div className="ServiceEndButton mt-5">
+                      <a
+                        href={item.serviceEndButtonLink}
+                        className="btn1 btn-sm btn--primary undefined btn--medium"
+                      >
+                        {item.serviceEndButtonText}
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
             </Col>
           </Row>

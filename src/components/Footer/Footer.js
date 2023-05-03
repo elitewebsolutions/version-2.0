@@ -2,7 +2,8 @@ import React from "react";
 import "./footer.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { Button } from "../Button/Button";
+
+import footer_icon from "../../assets/footer-icon.png";
 
 function Footer() {
   return (
@@ -15,47 +16,55 @@ function Footer() {
                 <div className="mainFooter_nav1">
                   <div className="mainFooter_image">
                     <NavLink to="/">
-                      <img
-                        src={
-                          "https://images.ctfassets.net/fb149n9elc9g/54RHjYcae4o73YJ7RUEmJm/eca560cbf12af9a4c90b6c4ad5b5cb35/admin-logo.svg"
-                        }
-                        alt="logo"
-                      />
+                      <img src={footer_icon} alt="Footer Logo" />
                     </NavLink>
-                  </div>
-                  <div className="footerInputBox mt-5">
-                    <p>We empower business to succees online.</p>
-
-                    <div className="footerInputField d-flex gap-2">
-                      <input type="text" />
-                      <Button className="btn--medium">search</Button>
-                    </div>
+                    <p>
+                      Welcome to <strong>Elite Web Solutions</strong>, where we
+                      empower businesses to establish and maintain a strong
+                      online presence. Our goal is to help businesses of all
+                      sizes succeed online.{" "}
+                    </p>
                   </div>
                 </div>
               </Col>
-              <Col lg={3}>
+              <Col className="col-md-6 col-lg-3">
                 <div className="footerExplore">
-                  <h5>Explore Link</h5>
-                  <div className="mt-4 d-flex flex-column gap-3">
-                    <span>Home</span>
-                    <span>Discover</span>
-                    <span>Universe</span>
-                    <span>Games</span>
-                    <span>Bussiness Opportunities</span>
-                    <span>Product</span>
+                  <h5>Explore Links</h5>
+                  <div className="mt-4 d-flex flex-column gap-3 footerlinks">
+                    <p>
+                      <a href="/">Home</a>
+                    </p>
+                    <p>
+                      <a href="/services">Services</a>
+                    </p>
+                    <p>
+                      <a href="/portfolio">Portfolio</a>
+                    </p>
+                    <p>
+                      <a href="/about-us">About us</a>
+                    </p>
+                    <p>
+                      <a href="/contact">Contact</a>
+                    </p>
                   </div>
                 </div>
               </Col>
-              <Col lg={3}>
-                <div className="footerExplore">
+              <Col className="col-md-6 col-lg-3">
+                <div className="footerExplore footercontact">
                   <h5>Contact Us</h5>
                   <div className="mt-4 d-flex flex-column gap-3">
-                    <span>Home</span>
-                    <span>Discover</span>
-                    <span>Universe</span>
-                    <span>Games</span>
-                    <span>Bussiness Opportunities</span>
-                    <span>Product</span>
+                    <p className="email-footer">
+                      <a href="mailto:contact@elitewebsolutions.co">
+                        contact@elitewebsolutions.co
+                      </a>
+                    </p>
+                    <p className="location-footer">
+                      Huntington Drive Apt E4, Murfreesboro 37130, Tennessee, US
+                    </p>
+                    <p className="location-footer">
+                      327, Sv square, New Ranip, Ahmedabad 380081, Gujarat,
+                      India
+                    </p>
                   </div>
                 </div>
               </Col>
@@ -64,7 +73,7 @@ function Footer() {
 
           <div className="mainFooter_copyright">
             <p>
-              Copyright © 2022 all rights reserved{" "}
+              Copyright 2023 all rights reserved by{" "}
               <strong>Elite Web Solutions</strong>
             </p>
           </div>

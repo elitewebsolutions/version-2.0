@@ -1,22 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceBussiness from "../components/ServiceDetail/ServiceBussiness";
 import ServiceDetailLanding from "../components/ServiceDetail/ServiceDetailLanding";
 import ServiceExplain from "../components/ServiceDetail/ServiceExplain";
 import ServiceBrand from "../components/ServiceDetail/ServiceBrand";
 import ServiceEnd from "../components/ServiceDetail/ServiceEnd";
+
+import useContentful from ".././useContentful";
+import { useParams } from "react-router-dom";
 function ServiceDetailPage() {
+  const { title } = useParams();
+
+  const { getServiceDetail, getHome, getServiceBrand } = useContentful();
+  const [home, setHome] = useState([]);
+  const [brand, setBrand] = useState([]);
+
+  const [serviceDetail, setServiceDetail] = useState([]);
+  useEffect(() => {
+    // document.title = title||;
+    getServiceDetail().then((item) => {
+      item?.items?.filter((i) => {
+        console.log(i);
+        return title === i.fields.slug.split(/[/]+/g).join("-").toLowerCase()
+          ? setServiceDetail(i)
+          : [];
+      });
+      // console.log(data);
+    });
+
+    getHome().then((res) => {
+      setHome(res);
+    });
+    getServiceBrand().then((res) => {
+      setBrand(res);
+    });
+
+    // eslint-disable-next-line
+  }, []);
+  // console.log(serviceDetail);
+
   return (
     <>
       <div className="content-wrapper-service-det">
-        <ServiceDetailLanding />
+        <ServiceDetailLanding
+          heading={serviceDetail?.fields?.heading}
+          image={serviceDetail?.fields?.bannerImage?.fields?.file.url}
+        />
       </div>
 
-      <ServiceExplain />
-      <div className="content-wrapper-service">
-        <ServiceBussiness />
+      <ServiceExplain
+        description={serviceDetail?.fields?.description}
+        image={serviceDetail?.fields?.image?.fields?.file.url}
+      />
+      <div className="content-wrapper-service serviceDetailContent">
+        <ServiceBussiness
+          home={home}
+          title={serviceDetail?.fields?.ourService}
+          detail={serviceDetail}
+        />
       </div>
-      <ServiceBrand />
-      <ServiceEnd />
+      <ServiceBrand brand={brand} />
+      <ServiceEnd content={serviceDetail} />
     </>
   );
 }

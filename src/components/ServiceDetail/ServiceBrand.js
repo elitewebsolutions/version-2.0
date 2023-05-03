@@ -1,25 +1,27 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-function ServiceBrand() {
+function ServiceBrand({ brand }) {
+
   return (
     <section className="serviceBrand">
-      <div className="wrapper">
         <Container fluid className="p-0">
           <Row>
             <Col lg={12}>
-              <div className="brandBox d-flex justify-content- align-items-center">
-                {[...new Array(19)].map((i, index) => {
-                  return (
-                    <div className="brandItems d-flex justify-content-between align-items-center">
-                      <span>BLOG WEBSITE</span>
-                    </div>
-                  );
-                })}
+              <div className="brandBox">
+                {
+                  brand?.items?.map((i, index) => {
+                    return (
+                      <div className="brandItems">
+                        <p className="marquee">
+                          <span>eCommerce website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Blog website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Portfolio website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Event website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Personal website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Membership website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Nonprofit website &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Informational website</span>
+                        </p>
+                      </div>
+                    );
+                  })}
               </div>
             </Col>
           </Row>
         </Container>
-      </div>
     </section>
   );
 }

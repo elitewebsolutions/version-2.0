@@ -10,16 +10,16 @@ export const MenuItems = [
         url: "/services",
         cName: "nav-links ",
     },
-    // {
-    //   title: "Project",
-    //   url: "/project",
-    //   cName: "nav-links ",
-    // },
     {
-        title: "Pricing",
-        url: "/pricing",
-        cName: "nav-links ",
+      title: "Portfolio",
+      url: "/portfolio",
+      cName: "nav-links ",
     },
+    // {
+    //     title: "Pricing",
+    //     url: "/pricing",
+    //     cName: "nav-links ",
+    // },
     {
         title: "About us",
         url: "/about-us",
@@ -27,12 +27,12 @@ export const MenuItems = [
     },
     {
         title: "Contact",
-        url: "/contacts",
+        url: "/contact",
         cName: "nav-links ",
     },
     {
         title: "Get Started",
         url: "#",
-        cName: "nav-links-mobile",
+        cName: "nav-links-mobile btn1 btn-sm btn--primary btn--medium",
     },
 ];

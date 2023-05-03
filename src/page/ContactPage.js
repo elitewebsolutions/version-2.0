@@ -9,7 +9,7 @@ function ContactPage(props) {
     }, []);
     return (
         <>
-            <div className="content-wrapper">
+            <div className="content-wrapper contactContentWrapper">
                 <ContactLanding />
             </div>
             <ContactForm />

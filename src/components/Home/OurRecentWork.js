@@ -1,134 +1,119 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import icon from "../../assets/home/icon2.png"
-import { Button } from "../Button/Button";
-
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import "./home.css";
-function OurRecentWork() {
-    return (
-        <section className="ProjectHomePage">
-            <div className="wrapper">
-                <Container fluid className="p-0">
-                    <Row className="">
-                        <Col lg={12}>
-                            <div className="text-center ourWorkrecentHome">
-                                <h2>
-                                    Our Recent Work
-                                </h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vel?
-                                </p>
-                            </div>
-                        </Col>
-                        <div className="mt-4">
+import btn_arrow from "../../assets/btn-arrow.png";
+import btn_link from "../../assets/btn_link.svg";
 
-                            {
-                                [...new Array(3)].map((i, index) => {
-                                    return (
-                                        index % 2 === 0 ?
+function ProjectCard({ card }) {
+  return (
+    <div
+      className="ourRecentWorkHomeBox"
+      style={{ backgroundColor: card?.fields?.cardColor }}
+    >
+      <img
+        src={card?.fields?.icon?.fields?.file?.url}
+        alt={card?.fields?.title}
+      />
+      <h6 className="text-white">{card?.fields?.title}</h6>
+      <div className="recentWorkButton d-flex gap-4 justify-content-end align-items-center mt-3">
+        <a
+          className="visitSiteLink"
+          href={card?.fields?.projectLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          VISIT SITE <img src={btn_link} className="img-size" alt="box" />
+        </a>
+        <a
+          href={card?.fields?.buttonLink}
+          target="_blank"
+          rel="noreferrer"
+          className="btn1 btn-sm btn--primary undefined btn--medium"
+        >
+          {card?.fields?.buttonText}
+        </a>
+      </div>
+    </div>
+  );
+}
 
-                                            <Row className="mb-4">
-                                                <Col lg={4}>
-                                                    <div className="ourRecentWorkHomeBox" style={{ backgroundColor: "#e6cd2b" }}>
-                                                        <img src={icon} alt="" />
-                                                        <h6 className="text-white">
-                                                            Westin Hotels
-                                                        </h6>
-                                                        <div className="d-flex gap-4 justify-content-end align-items-center mt-3">
+function OurRecentWork({ home }) {
+  const projectCards = (item) => {
+    const cards = item?.fields?.projectCard?.map((card, key) => (
+      <Col
+        lg={card?.fields?.cardSize ? "4" : "8"}
+        key={key}
+        className="singleRecentWork"
+      >
+        {[...new Array(1)].map((i, index) => (
+          <React.Fragment key={index}>
+            {index % 2 === 0 ? (
+              <ProjectCard card={card} />
+            ) : (
+              <ProjectCard card={card} />
+            )}
+          </React.Fragment>
+        ))}
+      </Col>
+    ));
+    return cards;
+  };
 
-                                                            <span style={{ fontSize: "12px", color: "white", fontWeight: "bold", cursor: "pointer" }}>VISIT SITE</span>
+  return (
+    <section className="homeRecentWork">
+      <div className="wrapper">
+        <Container fluid className="p-0">
+          <Row className="">
+            <Col lg={12}>
+              <div className="text-center ourWorkrecentHome">
+                {home?.items?.map((item, index) => (
+                  <div key={index}>
+                    {documentToReactComponents(item.fields.bannerFive)}
+                  </div>
+                ))}
+              </div>
+            </Col>
+          </Row>
 
-                                                            <Button>
+          <Row className="recentWorkListing">
+            {home?.items?.map((item, key) => (
+              <React.Fragment key={key}>{projectCards(item)}</React.Fragment>
+            ))}
+          </Row>
 
-                                                                VIEW CASE STUDY
-                                                            </Button>
-                                                        </div>
-                                                    </div>
-
-                                                </Col>
-                                                <Col lg={8}>
-                                                    <div className="ourRecentWorkHomeBox" style={{ backgroundColor: "violet" }}>
-                                                        <img src={icon} alt="" />
-                                                        <h6 className="text-white">
-                                                            Westin Hotels
-                                                        </h6>
-                                                        <div className="d-flex gap-4 justify-content-end align-items-center mt-3">
-
-                                                            <span style={{ fontSize: "12px", color: "white", fontWeight: "bold", cursor: "pointer" }}>VISIT SITE</span>
-
-                                                            <Button>
-
-                                                                VIEW CASE STUDY
-                                                            </Button>
-                                                        </div>
-                                                    </div>
-
-                                                </Col>
-                                            </Row>
-
-
-
-
-
-
-                                            : <Row className="mb-4">
-                                                <Col lg={8}>
-                                                    <div className="ourRecentWorkHomeBox" style={{ backgroundColor: "#e6cd2b" }}>
-                                                        <img src={icon} alt="" />
-                                                        <h6 className="text-white">
-                                                            Westin Hotels
-                                                        </h6>
-                                                        <div className="d-flex gap-4 justify-content-end align-items-center mt-3">
-
-                                                            <span style={{ fontSize: "12px", color: "white", fontWeight: "bold", cursor: "pointer" }}>VISIT SITE</span>
-
-                                                            <Button>
-
-                                                                VIEW CASE STUDY
-                                                            </Button>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={4}>
-                                                    <div className="ourRecentWorkHomeBox" style={{ backgroundColor: "violet" }}>
-                                                        <img src={icon} alt="" />
-                                                        <h6 className="text-white">
-                                                            Westin Hotels
-                                                        </h6>
-                                                        <div className="d-flex gap-4 justify-content-end align-items-center mt-3">
-
-                                                            <span style={{ fontSize: "12px", color: "white", fontWeight: "bold", cursor: "pointer" }}>VISIT SITE</span>
-
-                                                            <Button>
-
-                                                                VIEW CASE STUDY
-                                                            </Button>
-                                                        </div>
-                                                    </div>
-
-                                                </Col>
-                                            </Row>
-
-
-                                    )
-                                })
-                            }
-                        </div>
-
-                    </Row>
-                    <div className="text-center justify-content-center d-flex gap-3 align-items-center" style={{ cursor: "pointer" }}>
-                        <span className="">
-                            <BsFillArrowRightCircleFill size={30} />
-                        </span>
-                        <span className="ml-4 fw-bold">
-                            VIEW ALL PROJECTS
-                        </span>
-                    </div>
-                </Container>
-            </div>
-        </section>
-    );
+          <div
+            className="text-center justify-content-center d-flex gap-3 align-items-center"
+            style={{ cursor: "pointer" }}
+          >
+            {home?.items?.map((item, index) => (
+              <div
+                key={index}
+                className="serviceBtnHomePage d-flex align-items-center"
+              >
+                <a
+                  className=""
+                  href={item.fields.allProjectLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={btn_arrow} className="img-size" alt="box" />
+                </a>
+                <a
+                  className="ml-4 fw-bold"
+                  href={item.fields.allProjectLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  VIEW ALL PROJECTS
+                </a>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </div>
+    </section>
+  );
 }
 
 export default OurRecentWork;

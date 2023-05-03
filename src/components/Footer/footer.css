@@ -1,10 +1,10 @@
-.mainFooter_image img {
-  width: 190px;
-}
 .mainFooter_copyright {
-  display: flex;
   position: relative;
-  top: 4em;
+  padding-top: 40px;
+  text-align: center;
+}
+.mainFooter_copyright p {
+  font-size: 15px;
 }
 .footerExplore span {
   font-weight: 500;
@@ -22,4 +22,64 @@
 }
 .footerInputBox p {
   font-weight: 500;
+}
+.footerExplore p {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.footerExplore p:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footerExplore p.email-footer:before {
+  background-image: url('../../assets/email-icon.png');
+}
+.footerExplore p.location-footer:before {
+  background-image: url('../../assets/location-icon.png');
+}
+.footercontact p {
+  padding-left: 30px;
+}
+.footerExplore h5 {
+  font-weight: 800;
+}
+.mainFooter_nav1 p {
+  max-width: 360px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.footerExplore p a {
+  transition: 0.4s ease all;
+}
+.footerExplore p a:hover {
+  color: #e074ea !important;
+}
+.footerlinks a {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainFooter_nav1 {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footerPage .col {
+    flex: unset;
+  }
+  .mainFooter_nav1 {
+    padding-bottom: 15px;
+  }
+  .footercontact {
+    padding-top: 30px;
+  }
 }

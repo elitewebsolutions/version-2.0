@@ -8,16 +8,15 @@ import HomePage from './page/HomePage';
 import PricingPage from './page/PricingPage';
 import ServiceDetailPage from './page/ServiceDetailPage';
 import ServicePage from './page/ServicePage';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
   const metaAbout = "About | Elite"
-  const metaHome = "Home| Elite"
-  const metaService = "Service| Elite"
-  const metaContact = "Contact| Elite"
+  const metaHome = "Home | Elite"
+  const metaService = "Service | Elite"
+  const metaContact = "Contact | Elite"
   const metaPrice = "Price | Elite"
-
-
 
 
   const ScrollTop = () => {
@@ -39,11 +38,12 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage metaHome={metaHome} />} />
         <Route path="/about-us" element={<AboutPage metaAbout={metaAbout} />} />
-        <Route path="/contacts" element={<ContactPage metaContact={metaContact} />} />
+        <Route path="/contact" element={<ContactPage metaContact={metaContact} />} />
         <Route path="/pricing" element={<PricingPage metaPrice={metaPrice} />} />
         <Route path="/services" element={<ServicePage metaService={metaService} />} />
         <Route path="/services/:title" element={<ServiceDetailPage metaService={metaService} />} />
       </Routes>
+      <ToastContainer />
       <Footer />
     </>
   );

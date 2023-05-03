@@ -1,21 +1,19 @@
 .pricingBox {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 2em 0em;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 3em 0em 5em;
   position: relative;
-  /* width: 100vh; */
   top: 0;
 }
 .pricingBox1 {
   padding: 2em 0em;
   position: relative;
+  border-right: 1px solid rgb(232 229 229 / 85%);
+  height: 100%;
 }
 .pricingBtnDown {
   position: absolute;
   bottom: 0;
-  width: calc(100% - 20px);
-  padding-bottom: 0.4em;
+  width: 100%;
+  padding: 20px 25px;
 }
 .pricingTabl .row > * {
   margin: 0 !important;
@@ -26,10 +24,12 @@
   width: 100%;
 }
 .pricingGarentyBox {
-  height: 47.5vh;
+  height: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .pricingTable p {
-  font-size: 18px;
+  font-weight: 500;
 }
 .pricingGarentyBox span {
   font-weight: 500;
@@ -37,4 +37,46 @@
 }
 .subText {
   font-size: 16px !important;
+}
+.pricingTable {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+.pricingTable .row .col-lg-3:nth-child(3) .pricingBox {
+  background: linear-gradient( 145deg, rgb(240 254 254 / 100%) 0%, rgb(2247 248 255 / 100%) 51%, rgb(254 243 255 / 100%) 100% );
+}
+.pricingBox .pricing-icon {
+  padding-bottom: 30px;
+}
+.pricingBox h3 {
+  font-size: 18px;
+  color: #eda3f1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pricingBox h4 {
+  margin-bottom: 0;
+}
+.pricingBox .pricingchoice p {
+  border-top: 1px solid rgb(232 229 229 / 85%);
+  margin: 0;
+  padding: 13px 30px;
+  height: 50px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.pricingBox1 p {
+  border-top: 1px solid rgb(232 229 229 / 85%);
+  margin-bottom: 0;
+  height: 50px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.pricingTable .row .col-lg-3 {
+  padding: 0;
+}
+.pricingTable .btn1 {
+  width: 100%;
 }

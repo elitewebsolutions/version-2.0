@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import ContactForm from "../components/Contact/ContactForm";
 import PricingLanding from "../components/Pricing/PricingLanding";
 import PricingTable from "../components/Pricing/PricingTable";
 

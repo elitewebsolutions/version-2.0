@@ -1,34 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import box from "../../assets/service/serv.png"
+
+import useContentful from "../../useContentful";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function LandingService() {
+  const [home, setHome] = useState([]);
+  const { getServicesLanding } = useContentful();
 
-    return (
-        <section className="serviceLandingPage">
-            <div className="wrapper">
-                <Container fluid className="p-0">
-                    <Row>
-                        <Col lg={6}>
-                            <div className="homeContent">
-                                <div>
-                                    <h3>Our Services</h3>
-                                    <h1>Specifically for
-                                        your Business</h1>
+  useEffect(() => {
+    getServicesLanding().then((res) => {
+      setHome(res);
+    });
+    // eslint-disable-next-line
+  }, []);
 
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={6}>
-                            <div className="homeImageBox1">
-                                <img src={box} className="img-size" alt="box" />
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-        </section>
-    );
+  return (
+    <section className="homePage serviceLandingPage">
+      <div className="wrapper">
+        <Container fluid className="p-0">
+          <Row>
+            <Col lg={7}>
+              <div className="homeContent">
+                <div className="homeContentInner">
+                  {home?.items?.map((item, index) => (
+                    <div key={index}>
+                      <span>
+                        {documentToReactComponents(item.fields.heading)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Col>
+            <Col lg={5}>
+              <div className="homeImageBox">
+                {home?.items?.map((item, index) => {
+                  return (
+                    <img
+                      key={index}
+                      src={item.fields.image?.fields.file.url}
+                      className="img-size"
+                      alt="box"
+                    />
+                  );
+                })}
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </section>
+  );
 }
 
 export default LandingService;
