@@ -10,7 +10,6 @@ import ProjectRating from '../components/Home/ProjectRating';
 function AboutPage(props) {
     const [about, setAbout] = useState([]);
     const { getAbout, getRating } = useContentful();
-    const [cta, setCta] = useState([]);
     const [rating, setRating] = useState([]);
     const [culture, setCulture] = useState([]);
 
@@ -19,7 +18,6 @@ function AboutPage(props) {
         document.title = props.metaAbout
         getAbout().then((res) => {
             setAbout(res.items[0]?.fields)
-            setCta(res.items[0]?.fields?.refAboutCta1)
             setCulture(res.items[0]?.fields?.ourWorkCulture)
         });
         getRating().then((res) => {
