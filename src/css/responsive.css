@@ -257,9 +257,9 @@ a:hover {
 .content-wihtout-gradientService .serviceImageBox {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -10%;
   transform: translateY(-50%);
-  width: 30%;
+  width: 38%;
   z-index: 1;
 }
 .content-wihtout-gradientService .serviceImageBox img {
@@ -268,9 +268,9 @@ a:hover {
 .content-wrapper-serviceIndex .serviceImageBox {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -10%;
   transform: translateY(-50%);
-  width: 30%;
+  width: 38%;
   z-index: 1;
 }
 .content-wrapper-serviceIndex .serviceImageBox img {
@@ -284,6 +284,17 @@ a:hover {
   position: relative;
   z-index: 1;
 }
+#learndash-development .serviceImageBox,
+#web-maintenance .serviceImageBox {
+  width: 50%;
+  right: -15%;
+}
+#web-development .serviceImageBox,
+#seo .serviceImageBox {
+  width: 50%;
+  left: -15%;
+}
+
 .contactLandingPage .homeContent .homeContentInner {
   max-width: 550px;
   width: 100%;
@@ -439,6 +450,14 @@ a:hover {
   .wrapper {
     width: 100%;
   }
+  #learndash-development .serviceImageBox, #web-maintenance .serviceImageBox {
+      width: 100%;
+      right: 0;
+  }
+  #web-development .serviceImageBox, #seo .serviceImageBox {
+      width: 100%;
+      left: 0;
+  }
   .serviceDetailLanding .flex-row-reverse {
     padding-bottom: 0 !important;
   }
@@ -454,8 +473,9 @@ a:hover {
     top: unset;
     left: unset;
     transform: unset;
-    width: 50%;
+    width: 100%;
     padding-bottom: 25px;
+    max-width: 550px;
   }
   .serviceLandingPage .homeImageBox {
     position: relative;
