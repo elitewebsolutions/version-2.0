@@ -123,14 +123,16 @@ nav.NavbarContainer.nav-bg .wrapper {
     margin: -1px;
   }
   .nav-menu.active {
-    background: linear-gradient( 145deg, rgb(254 243 255) 0%, rgb(247 248 255) 48%, rgb(240 254 254) 100% );
-    mix-blend-mode: overlay;
+    background: #fff;
     color: white;
     left: 0;
-    padding-top: 1em;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    padding-top: 150px;
+    z-index: -1;
   }
 
   .menu-menu:nth-child(6) {

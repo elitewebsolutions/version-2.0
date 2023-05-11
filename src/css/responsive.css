@@ -62,10 +62,22 @@
   font-size: 40px;
 }
 .footerPage {
+  position: relative;
   background: #fff;
   width: 100%;
   padding: 3em 0 1em;
   margin: 0;
+}
+.footerPage:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 1;
+  background: var(--primary);
+  transition: 0.4s ease all;
 }
 .content-wrapper-service {
   background: linear-gradient(
@@ -129,7 +141,7 @@ h6 {
   font-size: 1em;
 }
 p {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 a {
@@ -455,6 +467,9 @@ a:hover {
   .wrapper {
     width: 100%;
   }
+  p {
+    font-size: 18px;
+  }
   .serviceBrand .serviceContain h2 br {
     display: none;
   }
@@ -553,6 +568,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 767px) {
+  .aboutWorkCulture {
+    padding-top: 60px;
+  }
   .serviceBrand .ServiceEndButton {
     margin-top: 25px !important;
   }
@@ -647,7 +665,8 @@ a:hover {
     font-size: 16px;
   }
   .ProjectHomePage {
-    padding-bottom: 50px;
+    padding-bottom: 0;
+    margin-top: -30px;
   }
   .CultureRowBlock {
     grid-gap: 0px;

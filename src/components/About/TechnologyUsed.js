@@ -10,7 +10,7 @@ function TechnologyUsed({ tech }) {
             <Col xl={4}>
               <div className="partnerTitle">
                 <div className="partnerInnerTitle">
-                  <h2>Technologies We are master in</h2>
+                  <h2>Technologies we master in</h2>
                 </div>
               </div>
             </Col>
