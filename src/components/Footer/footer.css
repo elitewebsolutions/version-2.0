@@ -66,6 +66,22 @@
 .footerlinks a {
   text-transform: uppercase;
 }
+.footerPage .social-icons {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footerPage .social-icons a {
+  display: block;
+}
+.footerPage .social-icons a img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
 
 @media screen and (max-width: 1024px) {
   .mainFooter_nav1 {

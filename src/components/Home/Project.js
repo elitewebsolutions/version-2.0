@@ -7,7 +7,7 @@ function Project({ home }) {
     <section className="ProjectHomePage">
       <div className="wrapper1">
         <Container fluid className="p-0">
-          <Row className="align-items-center">
+          <Row className="top-project align-items-center">
             <Col className="col-lg-6 col-xl-7">
               {home?.items?.map((item, index) => (
                 <div className="projectBoxImageHome" key={index}>
@@ -39,7 +39,7 @@ function Project({ home }) {
               </div>
             </Col>
           </Row>
-          <Row className="mt-5 align-items-center reverse-project">
+          <Row className="bottom-project mt-5 align-items-center reverse-project">
             <Col className="col-lg-6 col-xl-5">
               <div className="projectHomePage left-spacing">
                 {home?.items?.map((item, index) => (

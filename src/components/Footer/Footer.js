@@ -4,6 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 import footer_icon from "../../assets/footer-icon.png";
+import facebook from "../../assets/footer/footer-facebook.png";
+import instagram from "../../assets/footer/footer-insta.png";
+import linkedin from "../../assets/footer/footer-linked.png";
 
 function Footer() {
   return (
@@ -24,6 +27,35 @@ function Footer() {
                       online presence. Our goal is to help businesses of all
                       sizes succeed online.{" "}
                     </p>
+                    <ul className="social-icons">
+                      <li>
+                        <a
+                          href="https://www.facebook.com/elitewebsolutions1"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img src={facebook} alt="Facebook" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://instagram.com/elitewebsolutions_?igshid=YmMyMTA2M2Y="
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img src={instagram} alt="Instagram" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/company/elite-websolutions/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img src={linkedin} alt="Linkedin" />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </Col>
@@ -35,16 +67,13 @@ function Footer() {
                       <a href="/">Home</a>
                     </p>
                     <p>
-                      <a href="/services">Services</a>
+                      <a href="/services/">Services</a>
                     </p>
                     <p>
-                      <a href="/portfolio">Portfolio</a>
+                      <a href="/about-us/">About us</a>
                     </p>
                     <p>
-                      <a href="/about-us">About us</a>
-                    </p>
-                    <p>
-                      <a href="/contact">Contact</a>
+                      <a href="/contact/">Contact</a>
                     </p>
                   </div>
                 </div>
@@ -62,8 +91,8 @@ function Footer() {
                       Huntington Drive Apt E4, Murfreesboro 37130, Tennessee, US
                     </p>
                     <p className="location-footer">
-                      327, Sv square, New Ranip, Ahmedabad 380081, Gujarat,
-                      India
+                      <a href="https://www.google.com/maps/dir//elite+web+solutions+software+company+in+ahmedabad/@23.089197,72.4948988,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x395e833096e5c6cf:0x4533b874dc80139c!2m2!1d72.5649392!2d23.0892124" target="_blacnk">327, S.V. Square, Opp. Savan Bungalows, New Ranip, 380081
+                      Ahmedabad (Gujarat - India)</a>
                     </p>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ function ProjectCard({ card }) {
         alt={card?.fields?.title}
       />
       <h6 className="text-white">{card?.fields?.title}</h6>
-      <div className="recentWorkButton d-flex gap-4 justify-content-end align-items-center mt-3">
+      <div className="recentWorkButton d-flex gap-4 justify-content-end align-items-center">
         <a
           className="visitSiteLink"
           href={card?.fields?.projectLink}
@@ -25,14 +25,7 @@ function ProjectCard({ card }) {
         >
           VISIT SITE <img src={btn_link} className="img-size" alt="box" />
         </a>
-        <a
-          href={card?.fields?.buttonLink}
-          target="_blank"
-          rel="noreferrer"
-          className="btn1 btn-sm btn--primary undefined btn--medium"
-        >
-          {card?.fields?.buttonText}
-        </a>
+
       </div>
     </div>
   );

@@ -14,7 +14,12 @@ function ServiceEnd({ content }) {
                 {fieldsArray?.slice(0, 1)?.map((item, index) => (
                   <div className="text-center mx-auto" key={index}>
                     <h2>{item.serviceEndTitle}</h2>
-                    <div className="ServiceEndButton mt-5">
+                    {
+                      (item.serviceEndTitle)
+                      ? <p>{item.serviceEndSubTitle}</p>
+                      : ''
+                    }
+                    <div className="ServiceEndButton mt-4">
                       <a
                         href={item.serviceEndButtonLink}
                         className="btn1 btn-sm btn--primary undefined btn--medium"

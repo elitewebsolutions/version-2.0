@@ -15,13 +15,15 @@
   margin: 0 auto;
 }
 .contactForm input,
-.contactForm textarea {
+.contactForm textarea,
+.contactForm select {
   border: none;
   background-color: transparent;
   border-bottom: 2px solid #d5d5d5;
   margin-top: 50px;
   outline: none;
   padding: 12px 0;
+  color: #757575;
 }
 .contactForm textarea {
   height: 140px;
@@ -175,7 +177,9 @@
     height: 360px;
     padding: 20px;
   }
-  .contactForm input, .contactForm textarea {
+  .contactForm input,
+  .contactForm textarea,
+  .contactForm select {
     margin-top: 25px !important;
   }
   .ContactFormPage .phone-number, .ContactFormPage .email-address {

@@ -76,12 +76,23 @@
 }
 .serviceDetImageBox {
   position: absolute;
-  top: -10em;
-  left: 0;
-  width: 25% !important;
+  top: -8em;
+  left: -10%;
+  width: 30% !important;
 }
 .serviceDetImageBox img {
   width: 100%;
+}
+#seo .serviceDetImageBox {
+  width: 40% !important;
+}
+#ui-ux-development .serviceDetImageBox {
+  left: -4%;
+  width: 28% !important;
+}
+#web-maintenance .serviceDetImageBox {
+  left: -15%;
+  width: 45% !important;
 }
 .homeImageBox {
   text-align: center;
@@ -221,6 +232,14 @@
 .projectBoxImageHome img {
   width: 100%;
 }
+.top-project .projectBoxImageHome img {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.bottom-project .projectBoxImageHome img {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
 .review_title h2 {
   background: linear-gradient(
     135deg,
@@ -259,12 +278,12 @@
 }
 .ourRecentWorkHomeBox .recentWorkButton {
   position: absolute;
-  bottom: 45px;
+  bottom: 25px;
   right: 28px;
 }
 .ourRecentWorkHomeBox .recentWorkButton .visitSiteLink {
   color: #fff !important;
-  padding: 15px 20px;
+  padding: 0;
   font-size: 15px;
   border-radius: 3em;
   text-transform: uppercase;
@@ -331,6 +350,7 @@
 }
 .homeRecentWork {
   padding-top: 100px;
+  display: none;
 }
 .homeRecentWork .ourWorkrecentHome {
   max-width: 500px;
@@ -482,10 +502,17 @@
   z-index: 1;
 }
 
-
+@media screen and (min-width: 1366px) {
+  .serviceDetailContent .detailPageServices .serviceHomeCardBox .serviceHomeCard {
+    width: calc(33.33% - 20px);
+  }
+}
 @media screen and (max-width: 1700px) {
   .serviceDetImageBox {
     top: 0;
+  }
+  #seo .serviceDetImageBox {
+    top: -5em;
   }
 }
 @media screen and (max-width: 1366px) {
@@ -562,6 +589,14 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  .top-project .projectBoxImageHome img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .bottom-project .projectBoxImageHome img {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
   .detailPageServices .serviceHomeCardBox .serviceHomeCard:last-child {
     border-right: none !important;
   }
@@ -570,6 +605,7 @@
   }
   .ProjectHomePage .col {
     flex: unset;
+    width: 100%;
   }
   .PartnerHomePage .partnerLogo .singlePartnerLogo img {
     padding: 10px 30px;
@@ -661,6 +697,13 @@
 
 }
 @media screen and (max-width: 767px) {
+  .serviceDetailLanding .flex-row-reverse {
+    flex-direction: column-reverse !important;
+    padding: 0 !important;
+  }
+  .serviceDetailLanding {
+    padding-top: 0;
+  }
   .serviceContentHome .serviceTitle p {
     font-size: 14px;
   }

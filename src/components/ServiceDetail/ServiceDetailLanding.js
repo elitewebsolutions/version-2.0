@@ -6,9 +6,9 @@ import btn_gradient_arrow from "../../assets/btn-gradient-arrow.png";
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-function ServiceDetailLanding({ heading, image }) {
+function ServiceDetailLanding({ heading, image, slug }) {
   return (
-    <section className="homePageDetailPage serviceDetailLanding">
+    <section className="homePageDetailPage serviceDetailLanding" id={slug}>
       <div className="wrapper">
         <Container fluid className="p-0">
           <Row style={{ padding: "4em 0" }} className="flex-row-reverse">

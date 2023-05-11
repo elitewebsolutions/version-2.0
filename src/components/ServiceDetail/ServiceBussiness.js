@@ -22,9 +22,13 @@ function ServiceBussiness({ title, detail }) {
           <div className="serviceListContent text-center mt-2">
             {documentToReactComponents(card?.fields?.description)}
           </div>
-          <a className="mt-2" href={card?.fields?.link}>
-            <img src={btn_gradient_arrow} className="img-size" alt="box" />
-          </a>
+          {
+            (card?.fields?.link)
+              ? <a className="mt-2" href={card?.fields?.link}>
+                <img src={btn_gradient_arrow} className="img-size" alt="box" />
+              </a>
+              : ''
+          }
         </div>
       );
     });

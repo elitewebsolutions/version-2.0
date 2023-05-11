@@ -37,10 +37,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage metaHome={metaHome} />} />
-        <Route path="/about-us" element={<AboutPage metaAbout={metaAbout} />} />
-        <Route path="/contact" element={<ContactPage metaContact={metaContact} />} />
-        <Route path="/pricing" element={<PricingPage metaPrice={metaPrice} />} />
-        <Route path="/services" element={<ServicePage metaService={metaService} />} />
+        <Route path="/about-us/" element={<AboutPage metaAbout={metaAbout} />} />
+        <Route path="/contact/" element={<ContactPage metaContact={metaContact} />} />
+        <Route path="/pricing/" element={<PricingPage metaPrice={metaPrice} />} />
+        <Route path="/services/" element={<ServicePage metaService={metaService} />} />
         <Route path="/services/:title" element={<ServiceDetailPage metaService={metaService} />} />
       </Routes>
       <ToastContainer />

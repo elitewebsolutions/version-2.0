@@ -66,7 +66,7 @@ function Header({ page }) {
 
               <div className="header-btn">
                 <a
-                  href="/"
+                  href="/contact/"
                   buttonSize="btn--medium"
                   btnHeader="header-btn-none"
                   className="btn1 btn-sm btn--primary btn--medium"

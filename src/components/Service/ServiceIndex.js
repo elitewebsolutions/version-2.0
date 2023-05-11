@@ -47,7 +47,7 @@ function ServiceIndex(props) {
                   <div>
                     <Link
                       className="btn1 btn-sm undefined btn--primary undefined btn--medium"
-                      to={`/services/${slug}`}
+                      to={`/services/${slug}/`}
                     >
                       <span>Read More</span>
                     </Link>

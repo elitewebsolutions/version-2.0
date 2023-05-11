@@ -7,14 +7,14 @@ export const MenuItems = [
 
     {
         title: "Services",
-        url: "/services",
+        url: "/services/",
         cName: "nav-links ",
     },
-    {
-      title: "Portfolio",
-      url: "/portfolio",
-      cName: "nav-links ",
-    },
+    // {
+    //   title: "Portfolio",
+    //   url: "/portfolio/",
+    //   cName: "nav-links ",
+    // },
     // {
     //     title: "Pricing",
     //     url: "/pricing",
@@ -22,12 +22,12 @@ export const MenuItems = [
     // },
     {
         title: "About us",
-        url: "/about-us",
+        url: "/about-us/",
         cName: "nav-links ",
     },
     {
         title: "Contact",
-        url: "/contact",
+        url: "/contact/",
         cName: "nav-links ",
     },
 ];

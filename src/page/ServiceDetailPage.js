@@ -44,6 +44,7 @@ function ServiceDetailPage() {
         <ServiceDetailLanding
           heading={serviceDetail?.fields?.heading}
           image={serviceDetail?.fields?.bannerImage?.fields?.file.url}
+          slug={serviceDetail?.fields?.slug}
         />
       </div>
 
