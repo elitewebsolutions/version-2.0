@@ -84,7 +84,7 @@ function Footer() {
                   <div className="mt-4 d-flex flex-column gap-3">
                     <p className="email-footer">
                       <a href="mailto:contact@elitewebsolutions.co">
-                        contact@elitewebsolutions.co
+                        Contact@elitewebsolutions.co
                       </a>
                     </p>
                     <p className="location-footer">
@@ -93,7 +93,7 @@ function Footer() {
                     </p>
                     <p className="location-footer">
                       <a href="https://www.google.com/maps/dir//elite+web+solutions+software+company+in+ahmedabad/@23.089197,72.4948988,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x395e833096e5c6cf:0x4533b874dc80139c!2m2!1d72.5649392!2d23.0892124" target="_blacnk" rel="noopener noreferrer">327, S.V. Square, Opp. Savan Bungalows, New Ranip, 380081
-                      Ahmedabad (Gujarat - India)</a>
+                      Ahmedabad, IND</a>
                     </p>
                   </div>
                 </div>
