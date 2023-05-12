@@ -51,9 +51,9 @@ function ContactForm() {
                       <img src={geticon} alt="Get in touch" />
                     </span>
                     <span className="email-address">
-                      <a href="mailto:contact@elitesolutions.co">
+                      <a href="mailto:contact@elitewebsolutions.co">
                         <img src={mail} alt="Email" />
-                        contact@elitesolutions.co
+                        contact@elitewebsolutions.co
                       </a>
                     </span>
                     <ul className="social-icons">
