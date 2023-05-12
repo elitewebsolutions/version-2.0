@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React, { useCallback, useEffect,useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -17,33 +17,39 @@ function App() {
   const metaService = "Service | Elite"
   const metaContact = "Contact | Elite"
   const metaPrice = "Price | Elite"
-  const location = useLocation();
   const[toggle,setToggle] = useState(false);
-
-  const handleClick = ()=>{
-    setToggle(!toggle)
-  }
+  const location1 = useLocation();
+  
+  const handleClick = useCallback((state="")=>{
+    if(state==="refresh"){
+      setToggle(false)
+    }else{
+      setToggle(!toggle)
+    }
+  },[toggle])
 
   const ScrollTop = () => {
-   
+
+  const location = useLocation();
     useEffect(() => {
       window.scrollTo({
         top: 0,
         left: 0,
       });
+
     }, [location.pathname]);
     return null;
   };
 
   useEffect(() => {
-   handleClick()
-   setToggle(false)
-  }, [location.pathname]);
+    handleClick("refresh")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location1.pathname])
 
   return (
     <>
       <ScrollTop />
-      <Header toggle={toggle}  handleClick={handleClick}/>
+      <Header toggle={toggle}  handleClick={()=>handleClick()}/>
       <Routes>
         <Route path="/" element={<HomePage metaHome={metaHome} />} />
         <Route path="/about-us/" element={<AboutPage metaAbout={metaAbout} />} />
