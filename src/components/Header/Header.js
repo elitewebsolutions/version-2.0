@@ -5,10 +5,8 @@ import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
-function Header({ page }) {
-  const [clicked, setClicked] = useState(false);
+function Header({ toggle, handleClick }) {
   const [scroll, setScroll] = useState(false);
-
   const onScrollChange = () => {
     if (window.scrollY >= 50) {
       setScroll(true);
@@ -18,14 +16,6 @@ function Header({ page }) {
   };
 
   window.addEventListener("scroll", onScrollChange);
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
-
-  // define btn click
-  const onClick = () => {
-    window.open(page.logoUrl, "_blank");
-  };
 
   return (
     <>
@@ -44,15 +34,15 @@ function Header({ page }) {
             </div>
 
             <div className="right-header">
-              <div className="menu-icons" onClick={handleClick}>
-                {clicked ? (
+              <div className="menu-icons" onClick={()=>handleClick()}>
+                {toggle ? (
                   <AiOutlineClose className="mobile-icon" />
                 ) : (
                   <HiOutlineMenuAlt1 className="mobile-icon" />
                 )}
               </div>
 
-              <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+              <ul className={toggle ? "nav-menu active" : "nav-menu"}>
                 {MenuItems.map((item, index) => {
                   return (
                     <li key={index}>
@@ -70,7 +60,6 @@ function Header({ page }) {
                   buttonSize="btn--medium"
                   btnHeader="header-btn-none"
                   className="btn1 btn-sm btn--primary btn--medium"
-                  onClick={onClick}
                 >
                   Get Free Website Audit
                 </a>

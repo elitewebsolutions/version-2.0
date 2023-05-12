@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -17,10 +17,15 @@ function App() {
   const metaService = "Service | Elite"
   const metaContact = "Contact | Elite"
   const metaPrice = "Price | Elite"
+  const location = useLocation();
+  const[toggle,setToggle] = useState(false);
 
+  const handleClick = ()=>{
+    setToggle(!toggle)
+  }
 
   const ScrollTop = () => {
-    const location = useLocation();
+   
     useEffect(() => {
       window.scrollTo({
         top: 0,
@@ -30,11 +35,15 @@ function App() {
     return null;
   };
 
+  useEffect(() => {
+   handleClick()
+   setToggle(false)
+  }, [location.pathname]);
 
   return (
     <>
       <ScrollTop />
-      <Header />
+      <Header toggle={toggle}  handleClick={handleClick}/>
       <Routes>
         <Route path="/" element={<HomePage metaHome={metaHome} />} />
         <Route path="/about-us/" element={<AboutPage metaAbout={metaAbout} />} />
