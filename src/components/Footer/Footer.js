@@ -3,10 +3,10 @@ import "./footer.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import footer_icon from "../../assets/footer-icon.png";
-import facebook from "../../assets/footer/footer-facebook.png";
-import instagram from "../../assets/footer/footer-insta.png";
-import linkedin from "../../assets/footer/footer-linked.png";
+import footer_icon from "../../assets/footer/footer-logo.svg";
+import facebook from "../../assets/footer/footer-facebook.svg";
+import instagram from "../../assets/footer/footer-insta.svg";
+import linkedin from "../../assets/footer/footer-linked.svg";
 
 function Footer() {
   return (
@@ -19,7 +19,7 @@ function Footer() {
                 <div className="mainFooter_nav1">
                   <div className="mainFooter_image">
                     <NavLink to="/">
-                      <img src={footer_icon} alt="Footer Logo" />
+                      <img src={footer_icon} alt="Footer Logo" className="footer_logo"/>
                     </NavLink>
                     <p>
                       Welcome to <strong>Elite Web Solutions</strong>, where we

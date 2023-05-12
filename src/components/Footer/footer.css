@@ -29,6 +29,10 @@
   font-weight: 600;
   margin-bottom: 0;
 }
+.footer_logo{
+    width: 90px;
+    margin-bottom: 13px;    
+}
 .footerExplore p:before {
   position: absolute;
   content: '';
