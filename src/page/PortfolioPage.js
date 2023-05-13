@@ -5,10 +5,10 @@ import PortfolioLanding from '../components/Portfolio/PortfolioLading';
 import TabList from '../components/Portfolio/TabList';
 
 function PortfolioPage(props) {
-    const [about, setAbout] = useState([]);
+    const [setAbout] = useState([]);
     const { getAbout, getRating } = useContentful();
-    const [rating, setRating] = useState([]);
-    const [culture, setCulture] = useState([]);
+    const [setRating] = useState([]);
+    const [setCulture] = useState([]);
 
 
     useEffect(() => {

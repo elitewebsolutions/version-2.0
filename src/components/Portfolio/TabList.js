@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Spinner } from "react-bootstrap";
-import { Tab, useContent } from "./TabMenu";
+import { Container, Spinner } from "react-bootstrap";
+import { Tab } from "./TabMenu";
 import PortfolioCard from "./PortfolioCard";
 import useContentful from "../../useContentful";
 
