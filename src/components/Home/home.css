@@ -225,6 +225,11 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  font-weight: bold;
+}
+.rightBar .serviceHomeCardBox .servicesbtn img {
+  width: 13px;
+  margin-left: 5px;
 }
 .rightBar .serviceHomeCardBox .serviceHomeCard:not(:last-child) {
   border-right: 1px solid #e5d7e8;
@@ -278,6 +283,9 @@
   border-radius: 12px;
   padding: 45px 28px;
   height: 320px;
+}
+.ourPortfolioCardBox {
+  height: 480px;
 }
 .ourRecentWorkHomeBox h6 {
   font-size: 28px;
@@ -506,6 +514,9 @@
 .PartnerHomePage .partnerTitle .partnerInnerTitle {
   position: relative;
   z-index: 1;
+}
+.serviceDetailContent .detailPageServices .serviceHomeCardBox .serviceHomeCard a.mt-2 {
+  display: none;
 }
 
 @media screen and (min-width: 1366px) {

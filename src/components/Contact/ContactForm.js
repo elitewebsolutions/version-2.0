@@ -53,7 +53,7 @@ function ContactForm() {
                     <span className="email-address">
                       <a href="mailto:contact@elitewebsolutions.co">
                         <img src={mail} alt="Email" />
-                        contact@elitewebsolutions.co
+                        Contact@elitewebsolutions.co
                       </a>
                     </span>
                     <ul className="social-icons">
@@ -167,7 +167,7 @@ function ContactForm() {
                           </select>
                           <textarea
                             required={true}
-                            className="fullWidth mt-5"
+                            className="fullWidth"
                             placeholder="Message"
                             name="message"
                           ></textarea>

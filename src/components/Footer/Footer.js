@@ -3,7 +3,7 @@ import "./footer.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import footer_icon from "../../assets/footer/footer-logo.svg";
+import footer_icon from "../../assets/footer/footer-icon.svg";
 import facebook from "../../assets/footer/footer-facebook.svg";
 import instagram from "../../assets/footer/footer-insta.svg";
 import linkedin from "../../assets/footer/footer-linked.svg";
@@ -19,7 +19,7 @@ function Footer() {
                 <div className="mainFooter_nav1">
                   <div className="mainFooter_image">
                     <NavLink to="/">
-                      <img src={footer_icon} alt="Footer Logo" className="footer_logo"/>
+                      <img src={footer_icon} alt="Footer Logo" className="footer_logo" />
                     </NavLink>
                     <p>
                       Welcome to <strong>Elite Web Solutions</strong>, where we
@@ -70,6 +70,9 @@ function Footer() {
                       <a href="/services/">Services</a>
                     </p>
                     <p>
+                      <a href="/portfolio/">Portfolio</a>
+                    </p>
+                    <p>
                       <a href="/about-us/">About us</a>
                     </p>
                     <p>
@@ -92,8 +95,7 @@ function Footer() {
                       Huntington Drive Apt E4, Murfreesboro 37130, Tennessee, US</a>
                     </p>
                     <p className="location-footer">
-                      <a href="https://www.google.com/maps/dir//elite+web+solutions+software+company+in+ahmedabad/@23.089197,72.4948988,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x395e833096e5c6cf:0x4533b874dc80139c!2m2!1d72.5649392!2d23.0892124" target="_blacnk" rel="noopener noreferrer">327, S.V. Square, Opp. Savan Bungalows, New Ranip, 380081
-                      Ahmedabad, IND</a>
+                      <a href="https://www.google.com/maps/dir//elite+web+solutions+software+company+in+ahmedabad/@23.089197,72.4948988,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x395e833096e5c6cf:0x4533b874dc80139c!2m2!1d72.5649392!2d23.0892124" target="_blacnk" rel="noopener noreferrer">327, S.V. Square, Opp. Savan Bungalows, New Ranip, 380081 Ahmedabad, IND</a>
                     </p>
                   </div>
                 </div>

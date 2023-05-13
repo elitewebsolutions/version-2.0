@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "./home.css";
 import btn_arrow from "../../assets/btn-arrow.png";
 import btn_link from "../../assets/btn_link.svg";
+import { Link } from "react-router-dom";
 
 function ProjectCard({ card }) {
   return (
@@ -57,6 +58,7 @@ function OurRecentWork({ home }) {
     <section className="homeRecentWork">
       <div className="wrapper">
         <Container fluid className="p-0">
+        
           <Row className="">
             <Col lg={12}>
               <div className="text-center ourWorkrecentHome">
@@ -84,25 +86,23 @@ function OurRecentWork({ home }) {
                 key={index}
                 className="serviceBtnHomePage d-flex align-items-center"
               >
-                <a
+                <Link
                   className=""
-                  href={item.fields.allProjectLink}
-                  target="_blank"
-                  rel="noreferrer"
+                  to={item.fields.allProjectLink}
                 >
                   <img src={btn_arrow} className="img-size" alt="box" />
-                </a>
-                <a
+                </Link>
+                <Link
+                  to={item.fields.allProjectLink}
                   className="ml-4 fw-bold"
-                  href={item.fields.allProjectLink}
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   VIEW ALL PROJECTS
-                </a>
+                </Link>
               </div>
             ))}
           </div>
+
+
         </Container>
       </div>
     </section>

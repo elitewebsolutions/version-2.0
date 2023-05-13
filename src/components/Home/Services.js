@@ -2,7 +2,7 @@ import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Container, Row, Col } from "react-bootstrap";
 import "./home.css";
-import btn_gradient_arrow from "../../assets/btn-gradient-arrow.png";
+import btn_arrow_black from "../../assets/btn_arrow_black.svg";
 
 function Services({ home }) {
   const getServiceCards = (item) => {
@@ -23,7 +23,7 @@ function Services({ home }) {
             {documentToReactComponents(card?.fields?.description)}
           </div>
           <a className="mt-2 servicesbtn" href={card?.fields?.link}>
-            <img src={btn_gradient_arrow} className="img-size" alt="box" />
+            Learn More <img src={btn_arrow_black} className="img-size" alt="box" />
           </a>
         </div>
       );

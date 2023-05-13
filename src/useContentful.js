@@ -107,11 +107,35 @@ const useContentful = () => {
             console.error(err);
         }
     };
+    const getPortfolio = async () => {
+        try {
+            const entries = await client.getEntries({
+                content_type: "portfolio",
+                select: "fields",
+            });
+            return entries;
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    const getPortfolioLandingPage = async () => {
+        try {
+            const entries = await client.getEntries({
+                content_type: "portfolioLandingPage",
+                select: "fields",
+            });
+            return entries;
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
 
 
 
-    return { getHome, getServiceIndex, getServiceDetail, getServicesLanding, getPricing, getAbout, getRating, getServiceBrand };
+    return { getHome, getServiceIndex, getServiceDetail, getServicesLanding,
+        getPortfolioLandingPage,
+        getPricing, getAbout, getRating, getServiceBrand,getPortfolio };
 };
 
 export default useContentful;

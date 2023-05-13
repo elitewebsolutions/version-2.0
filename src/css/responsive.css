@@ -94,13 +94,49 @@
 section {
   margin-top: 4em;
 }
-
+.modal-content {
+  overflow: hidden;
+  border-radius: 30px;
+}
+.modal-content .modal-header {
+  padding: 0;
+  border: none;
+}
+.modal-content .modal-header img {
+  width: 100%;
+}
+.modal-content .modal-header .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 15px;
+  outline: none;
+  box-shadow: none;
+}
+.modal-content .modal-footer {
+  display: none;
+}
 .divider {
   margin-top: 4em;
   background-color: #90909057;
   width: auto;
   height: 3px;
   padding: 0px;
+}
+.modal-content:after {
+  position: absolute;
+  content: '';
+  right: -220px;
+  bottom: -220px;
+  width: 320px;
+  height: 320px;
+  background-image: url(../assets/audit-website-circle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.modal-content .modal-body {
+  padding: 40px 50px;
 }
 
 /* second title */
@@ -604,11 +640,12 @@ a:hover {
     font-size: 16px;
   }
   .serviceDetImageBox {
-    position: unset;
+    position: relative;
     left: unset;
     top: unset;
     width: 100% !important;
     padding-bottom: 30px;
+    z-index: 1
   }
   #seo .serviceDetImageBox,
   #ui-ux-development .serviceDetImageBox {

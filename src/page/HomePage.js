@@ -37,6 +37,7 @@ function HomePage(props) {
       <ProjectRating rating={rating?.items} />
 
       <OurRecentWork home={home} />
+      
       <OurPartners home={home} />
     </>
   );

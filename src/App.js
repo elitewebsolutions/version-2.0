@@ -9,6 +9,7 @@ import PricingPage from './page/PricingPage';
 import ServiceDetailPage from './page/ServiceDetailPage';
 import ServicePage from './page/ServicePage';
 import { ToastContainer } from 'react-toastify';
+import PortfolioPage from './page/PortfolioPage';
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
   const metaService = "Service | Elite"
   const metaContact = "Contact | Elite"
   const metaPrice = "Price | Elite"
+  const metaPortfolio= "Portfolio | Elite"
+
+
   const[toggle,setToggle] = useState(false);
   const location1 = useLocation();
   
@@ -54,6 +58,7 @@ function App() {
         <Route path="/" element={<HomePage metaHome={metaHome} />} />
         <Route path="/about-us/" element={<AboutPage metaAbout={metaAbout} />} />
         <Route path="/contact/" element={<ContactPage metaContact={metaContact} />} />
+        <Route path="/portfolio/" element={<PortfolioPage metaPortfolio={metaPortfolio} />} />
         <Route path="/pricing/" element={<PricingPage metaPrice={metaPrice} />} />
         <Route path="/services/" element={<ServicePage metaService={metaService} />} />
         <Route path="/services/:title" element={<ServiceDetailPage metaService={metaService} />} />
