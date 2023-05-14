@@ -5,6 +5,7 @@
 }
 .mainFooter_copyright p {
   font-size: 15px;
+  color: #fff;
 }
 .footerExplore span {
   font-weight: 500;
@@ -22,12 +23,14 @@
 }
 .footerInputBox p {
   font-weight: 500;
+  color: #fff;
 }
 .footerExplore p {
   position: relative;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 0;
+  color: #fff;
 }
 .footerExplore p:before {
   position: absolute;
@@ -48,24 +51,28 @@
 }
 .footercontact p {
   padding-left: 30px;
+  color: #fff;
 }
 .footerExplore h5 {
   font-weight: 800;
+  color: #fff;
 }
 .mainFooter_nav1 p {
   max-width: 360px;
   font-size: 15px;
   font-weight: 500;
-  color: black !important;
+  color: #fff !important;
 }
 .footerExplore p a {
   transition: 0.4s ease all;
+  color: #fff !important;
 }
 .footerExplore p a:hover {
   color: #e074ea !important;
 }
 .footerlinks a {
-  text-transform: uppercase;
+  text-transform: capitalize;
+  color: #fff;
 }
 .footerPage .social-icons {
   display: flex;
@@ -87,14 +94,24 @@
   width: 90px;
   margin-bottom: 12px;
 }
-
+.mainFooter_copyright p strong {
+  background: linear-gradient(135deg, #facdfe 0%, #d9dcfd 48%, #b5f9fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @media screen and (max-width: 1024px) {
   .mainFooter_nav1 {
     padding-bottom: 30px;
   }
+  .footerPage .row .footer-services .footerExplore {
+    padding-bottom: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
+  .footerPage .row .footer-services {
+    padding-top: 30px;
+  }
   .mainFooter_copyright p strong {
     display: block;
   }

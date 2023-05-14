@@ -196,9 +196,6 @@ nav.NavbarContainer.nav-bg .wrapper {
     color: #f3f3f3;
     transition: 250ms;
   }
-  Button {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1150px) {

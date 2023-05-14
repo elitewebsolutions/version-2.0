@@ -5,6 +5,10 @@
   box-sizing: border-box;
   padding: 0 20px;
 }
+.modal-backdrop,
+.modal {
+  z-index: 99999 !important;
+}
 .header-wrapper {
   background: #ffffff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.06);

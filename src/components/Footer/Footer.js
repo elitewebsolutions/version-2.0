@@ -15,7 +15,7 @@ function Footer() {
         <div className="wrapper">
           <Container fluid className="p-0">
             <Row>
-              <Col lg={6}>
+              <Col className="col-md-6 col-lg-4">
                 <div className="mainFooter_nav1">
                   <div className="mainFooter_image">
                     <NavLink to="/">
@@ -59,7 +59,35 @@ function Footer() {
                   </div>
                 </div>
               </Col>
-              <Col className="col-md-6 col-lg-3">
+              <Col className="col-md-6 col-lg-3 footer-services">
+                <div className="footerExplore">
+                  <h5>Services</h5>
+                  <div className="mt-4 d-flex flex-column gap-3 footerlinks">
+                    <p>
+                      <a href="/services/wordpress-development/">WordPress Development</a>
+                    </p>
+                    <p>
+                      <a href="/services/learndash-development/">Learndash LMS Development</a>
+                    </p>
+                    <p>
+                      <a href="/services/web-development/">Web Development</a>
+                    </p>
+                    <p>
+                      <a href="/services/ui-ux-development/">UI/UX Development</a>
+                    </p>
+                    <p>
+                      <a href="/services/web-maintenance/">Web Maintenance</a>
+                    </p>
+                    <p>
+                      <a href="/services/seo/">Search Engine Optimization</a>
+                    </p>
+                    <p>
+                      <a href="/services/web-hosting/">Web Hosting</a>
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col className="col-md-6 col-lg-2">
                 <div className="footerExplore">
                   <h5>Explore Links</h5>
                   <div className="mt-4 d-flex flex-column gap-3 footerlinks">
