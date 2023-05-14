@@ -17,7 +17,7 @@ export const Tab=[
         id:"learndash",
     },
     {
-        title:"PAGE BUILDER",
+        title:"ELEMENTOR",
         id:"pagebuilder",
     },
 ]
