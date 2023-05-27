@@ -699,6 +699,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 767px) {
+  .testimonialHomePage .testnomialCard .testnomialCard-content1 p {
+    font-size: 16px;
+  }
   .testimonialHomePage .testnomialCard .testimomial-by {
     bottom: 25px;
     right: 30px;
