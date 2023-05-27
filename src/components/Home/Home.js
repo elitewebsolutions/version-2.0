@@ -6,7 +6,7 @@ import btn_arrow from "../../assets/btn-arrow.png";
 
 function Home({ home }) {
   return (
-    <section className="homePage">
+    <section className="homePage homeWeb">
       <div className="wrapper">
         <Container fluid className="p-0">
           <Row className="justify-content-between">
@@ -27,8 +27,8 @@ function Home({ home }) {
                     >
                       <a href={item.fields.firstLink}>
                         <img src={btn_arrow} className="img-size" alt="box" />
+                        <span>{item.fields.linkText}</span>
                       </a>
-                      <a href={item.fields.firstLink}>{item.fields.linkText}</a>
                     </div>
                   );
                 })}

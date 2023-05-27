@@ -32,7 +32,7 @@ function PortfolioCard({ content }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  VISIT SITE
+                  <span>VISIT SITE</span>
                 </a>
                 <div>
                 {

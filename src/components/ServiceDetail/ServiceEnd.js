@@ -24,7 +24,7 @@ function ServiceEnd({ content }) {
                         href={item.serviceEndButtonLink}
                         className="btn1 btn-sm btn--primary undefined btn--medium"
                       >
-                        {item.serviceEndButtonText}
+                        <span>{item.serviceEndButtonText}</span>
                       </a>
                     </div>
                   </div>

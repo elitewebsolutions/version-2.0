@@ -5,10 +5,6 @@
   box-sizing: border-box;
   padding: 0 20px;
 }
-.modal-backdrop,
-.modal {
-  z-index: 99999 !important;
-}
 .header-wrapper {
   background: #ffffff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.06);
@@ -72,16 +68,14 @@
   padding: 3em 0 1em;
   margin: 0;
 }
-.footerPage:after {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  opacity: 1;
-  background: var(--primary);
+.serviceBtnHomePage a {
   transition: 0.4s ease all;
+}
+.serviceBtnHomePage a:hover {
+  color: #e074ea !important;
+}
+.serviceBtnHomePage a span {
+  padding-left: 15px;
 }
 .content-wrapper-service {
   background: linear-gradient(
@@ -142,6 +136,89 @@ section {
 .modal-content .modal-body {
   padding: 40px 50px;
 }
+.modal-backdrop,
+.modal {
+  z-index: 99999 !important;
+}
+.testimonialHomePage .testnomialsBox {
+  max-width: 900px;
+  margin: auto;
+}
+.testimonialHomePage .testnomialCard {
+  min-height: 365px;
+  box-shadow: 0 0 14px 0 rgb(228 215 254 / 65%);
+}
+.testimonialHomePage .testnomialCard:before {
+  position: absolute;
+  content: '';
+  top: -100px;
+  left: -100px;
+  width: 166px;
+  height: 166px;
+  background-image: url('../assets/home/happy-clients.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: animName 7s linear infinite;
+}
+@keyframes animName {
+ 0%{
+    transform: rotate(0deg);
+   }
+100%{
+    transform: rotate(360deg);
+   }
+}
+.testimonialHomePage .testnomialCard .testnomialCard-content1 {
+  padding: 20px;
+  padding-top: 40px;;
+  padding-bottom: 60px;
+}
+.testimonialHomePage .testnomialCard .testnomialCard-content1:before {
+  position: absolute;
+  content: '';
+  top: 50px;
+  left: 40px;
+  width: 38px;
+  height: 30px;
+  background-image: url('../assets/home/quote.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.testimonialHomePage .testnomials-heading {
+  padding-bottom: 40px;
+}
+.testimonialHomePage .testnomialCard .testnomialCard-content1 p {
+  color: #000;
+  line-height: 1.6;
+}
+.testimonialHomePage .testnomialCard h6 {
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.testimonialHomePage .testnomialCard .testimomial-by {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+}
+.testimonialHomePage .testnomialCard .testimomial-by h6:last-child {
+  color: rgb(0 0 0 / 40%);
+  margin-bottom: 0;
+}
+.homeWeb .homeContent:before {
+  top: 28.5%;
+}
+.testimonialHomePage .testnomialCard .rounded-circle {
+  transition: 0.4s ease all;
+}
+.testimonialHomePage .testnomialCard .rounded-circle:hover {
+  background-color: #e074ea !important;
+}
+
 
 /* second title */
 h1 {
@@ -450,7 +527,7 @@ a:hover {
 .contactLandingPgae .homeImageBox {
   max-width: 440px;
 }
-.nav-menu li .nav-links:after {
+.nav-menu > li > .nav-links:after {
   position: absolute;
   content: '';
   left: 0;
@@ -461,8 +538,8 @@ a:hover {
   background: var(--primary);
   transition: 0.4s ease all;
 }
-.nav-menu li .nav-links.active:after,
-.nav-menu li .nav-links:hover:after {
+.nav-menu > li > .nav-links.active:after,
+.nav-menu > li > .nav-links:hover:after {
   opacity: 1;
 }
 
@@ -509,6 +586,15 @@ a:hover {
   }
   p {
     font-size: 18px;
+  }
+  .testimonialHomePage .testnomialCard:before {
+    top: -80px;
+    left: -15px;
+    width: 116px;
+    height: 116px;
+  }
+  .testimonialHomePage .testnomialCard {
+    min-height: 360px;
   }
   .serviceBrand .serviceContain h2 br {
     display: none;
@@ -591,6 +677,11 @@ a:hover {
   .serviceBrand .serviceContain {
     padding-bottom: 0;
   }
+  .testimonialHomePage .testnomialCard .rounded-circle {
+    width: 40px;
+    height: 40px;
+    right: -0.9em !important;
+  }
 }
 @media screen and (max-width: 992px) {
   .serviceDetPageExp .row {
@@ -608,6 +699,26 @@ a:hover {
   }
 }
 @media screen and (max-width: 767px) {
+  .testimonialHomePage .testnomialCard .testimomial-by {
+    bottom: 25px;
+    right: 30px;
+  }
+  .testimonialHomePage .testnomialCard h6 {
+    bottom: 30px;
+  }
+  .testimonialHomePage .testnomialCard {
+    padding: 30px 10px !important;
+  }
+  .testimonialHomePage .testnomialCard .testnomialCard-content1:before {
+    top: 40px;
+    left: 10px;
+  }
+  .testimonialHomePage .testnomialCard:before {
+    top: -50px;
+    left: -15px;
+    width: 86px;
+    height: 86px;
+  }
   .aboutWorkCulture {
     padding-top: 60px;
   }

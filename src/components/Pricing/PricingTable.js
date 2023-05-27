@@ -129,7 +129,7 @@ function PricingTable() {
                         href="/"
                         className="btn1 btn-sm btn--primary undefined btn--medium"
                       >
-                        Get Started
+                        <span>Get Started</span>
                       </a>
                     </div>
                   </div>

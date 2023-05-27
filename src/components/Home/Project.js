@@ -31,7 +31,7 @@ function Project({ home }) {
                         className="btn1 btn-sm undefined btn--primary btn--medium"
                         href={item.fields.fourButtonLink}
                       >
-                        {item.fields.fourButton}
+                        <span>{item.fields.fourButton}</span>
                       </a>
                     </div>
                   </div>
@@ -54,7 +54,7 @@ function Project({ home }) {
                         className="btn1 btn-sm undefined btn--primary btn--medium"
                         href={item.fields.fourButtonLinkTwo}
                       >
-                        {item.fields.fourButtonTwo}
+                        <span>{item.fields.fourButtonTwo}</span>
                       </a>
                     </div>
                   </div>

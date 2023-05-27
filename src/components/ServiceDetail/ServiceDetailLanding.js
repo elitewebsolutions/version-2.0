@@ -6,7 +6,14 @@ import btn_gradient_arrow from "../../assets/btn-gradient-arrow.png";
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
+
+
+
 function ServiceDetailLanding({ heading, image, slug }) {
+
+
+  
+
   return (
     <section className="homePageDetailPage serviceDetailLanding" id={slug}>
       <div className="wrapper">
@@ -16,7 +23,6 @@ function ServiceDetailLanding({ heading, image, slug }) {
               <div className="homeContent">
                 <div>{documentToReactComponents(heading)}</div>
               </div>
-
               <div
                 className="serviceBtnHomePage d-flex gap-2 align-items-center"
                 style={{ cursor: "pointer" }}

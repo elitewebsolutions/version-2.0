@@ -174,7 +174,7 @@ function ContactForm() {
                         </div>
 
                         <div className="sendMessage text-center mt-5">
-                          <Button type="submit">Submit</Button>
+                          <Button type="submit"><span>Submit</span></Button>
                         </div>
                       </form>
                     </div>

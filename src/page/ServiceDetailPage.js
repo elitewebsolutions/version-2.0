@@ -6,9 +6,10 @@ import ServiceBrand from "../components/ServiceDetail/ServiceBrand";
 import ServiceEnd from "../components/ServiceDetail/ServiceEnd";
 
 import useContentful from ".././useContentful";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 function ServiceDetailPage() {
   const { title } = useParams();
+  const location = useLocation();
 
   const { getServiceDetail, getHome, getServiceBrand } = useContentful();
   const [home, setHome] = useState([]);
@@ -34,8 +35,8 @@ function ServiceDetailPage() {
       setBrand(res);
     });
 
-    // eslint-disable-next-line
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
   // console.log(serviceDetail);
 
   return (

@@ -7,6 +7,7 @@ import OurRecentWork from "../components/Home/OurRecentWork";
 import Project from "../components/Home/Project";
 import ProjectRating from "../components/Home/ProjectRating";
 import Services from "../components/Home/Services";
+import Testnomial from "../components/Home/Testnomial";
 
 function HomePage(props) {
   const [home, setHome] = useState([]);
@@ -34,11 +35,16 @@ function HomePage(props) {
         <Services home={home} />
       </div>
       <Project home={home} />
+
+      <Testnomial/>
+
       <ProjectRating rating={rating?.items} />
 
       <OurRecentWork home={home} />
-      
+
       <OurPartners home={home} />
+
+
     </>
   );
 }

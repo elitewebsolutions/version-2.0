@@ -30,7 +30,7 @@ function About({ home }) {
                         className="btn1 btn-sm undefined btn--primary btn--medium"
                         href={item.fields.secondButtonLink}
                       >
-                        {item.fields.secondButton}
+                        <span>{item.fields.secondButton}</span>
                       </a>
                     </div>
 
@@ -40,8 +40,8 @@ function About({ home }) {
                     >
                       <a href={item.fields.sideLink}>
                         <img src={btn_arrow} className="img-size" alt="box" />
+                        <span>{item.fields.sideText}</span>
                       </a>
-                      <a href={item.fields.sideLink}>{item.fields.sideText}</a>
                     </div>
                   </div>
                 ))}

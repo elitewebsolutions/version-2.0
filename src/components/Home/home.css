@@ -2,9 +2,6 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-.serviceBtnHomePage > a:first-child {
-  padding-right: 20px;
-}
 .homeImageBox img {
   width: 100%;
 }
@@ -12,14 +9,14 @@
   overflow-x: hidden;
 }
 .homePage .homeContent h3 {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1;
   font-weight: 800;
   margin-bottom: 15px;
 }
 .homePage .homeContent h1 {
-  font-size: 90px;
-  line-height: 1;
+  font-size: 70px;
+  line-height: 1.1;
   font-weight: 800;
 }
 .homeContent {
@@ -226,10 +223,18 @@
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
+  transition: 0.4s ease all;
 }
 .rightBar .serviceHomeCardBox .servicesbtn img {
   width: 13px;
   margin-left: 5px;
+  transition: 0.4s ease all;
+}
+.rightBar .serviceHomeCardBox .servicesbtn:hover {
+  color: #e074ea !important;
+}
+.rightBar .serviceHomeCardBox .servicesbtn:hover img {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(29%) saturate(1729%) hue-rotate(246deg) brightness(92%) contrast(99%);
 }
 .rightBar .serviceHomeCardBox .serviceHomeCard:not(:last-child) {
   border-right: 1px solid #e5d7e8;
@@ -314,13 +319,6 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-/* .singlePartnerLogo img {
-  filter: grayscale(100%);
-  transition: 0.4s all ease-in-out;
-}
-.singlePartnerLogo img:hover {
-  filter: none;
-} */
 .PartnerHomePage .partnerLogo .row {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -518,6 +516,13 @@
 .serviceDetailContent .detailPageServices .serviceHomeCardBox .serviceHomeCard a.mt-2 {
   display: none;
 }
+.testimonialHomePage {
+  padding-top: 30px;
+}
+.homeWeb .col-lg-6 {
+  display: flex;
+  align-items: flex-end;
+}
 
 @media screen and (min-width: 1366px) {
   .serviceDetailContent .detailPageServices .serviceHomeCardBox .serviceHomeCard {
@@ -541,7 +546,7 @@
     padding-bottom: 3em;
   }
   .homePage .homeContent h1 {
-    font-size: 80px;
+    font-size: 65px;
   }
   .homeRecentWork {
     padding-top: 60px;
@@ -592,10 +597,10 @@
     right: 50px;
   }
   .homePage .homeContent h1 {
-    font-size: 70px;
+    font-size: 55px;
   }
   .homePage .homeContent h3 {
-    font-size: 34px;
+    font-size: 30px;
   }
   .ProjectHomePage {
     padding-top: 50px;
@@ -685,10 +690,10 @@
     padding-top: 0;
   }
   .homePage .homeContent h1 {
-    font-size: 55px;
+    font-size: 45px;
   }
   .homePage .homeContent h3 {
-    font-size: 30px;
+    font-size: 26px;
   }
   .aboutImageBox img {
     width: 280px;
@@ -712,9 +717,6 @@
     right: unset;
     transform: translate(-50%, -50%);
   }
-}
-@media screen and (max-width: 992px) {
-
 }
 @media screen and (max-width: 767px) {
   .serviceDetailLanding .flex-row-reverse {
@@ -800,9 +802,6 @@
   }
   .rightBar .serviceHomeCardBox .serviceHomeCard:not(:last-child) {
       border-bottom: 1px solid #e5d7e8;
-  }
-  .serviceBtnHomePage > a:first-child {
-    padding-right: 10px;
   }
   .serviceBtnHomePage > a:first-child img {
     width: 42px;
