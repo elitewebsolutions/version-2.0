@@ -1,10 +1,8 @@
 import React from "react";
 import { useCallback, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./home.css";
 import { BiChevronRight } from "react-icons/bi";
-import test from "../../assets/test.png";
-// import logo from "../../assets/logo.png";
 import { data } from "../../utils/testnomial";
 function Testnomial() {
   const [index, setIndex] = useState(0);
@@ -17,7 +15,7 @@ function Testnomial() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
-  const {id,content,logo,authorName,authorDes} = data[index];
+  const {content,authorName,authorDes} = data[index];
 
   return (
     <section className="testimonialHomePage mb-5">
