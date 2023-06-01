@@ -104,6 +104,9 @@ function Footer() {
                       <a href="/about-us/">About us</a>
                     </p>
                     <p>
+                      <a href="/pricing/">Pricing</a>
+                    </p>
+                    <p>
                       <a href="/contact/">Contact</a>
                     </p>
                   </div>

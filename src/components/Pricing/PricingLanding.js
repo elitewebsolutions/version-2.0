@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import box from "../../assets/service/serv.png"
+import box from "../../assets/pricing/pricing-img.png"
 
 function PricingLanding() {
 
     return (
-        <section className="homePage serviceLandingPage">
+        <section className="homePage serviceLandingPage pricingLandingPage">
             <div className="wrapper">
                 <Container fluid className="p-0">
                     <Row>
@@ -13,13 +13,13 @@ function PricingLanding() {
                             <div className="homeContent">
                                 <div className="homeContentInner">
                                     <h3>Pricing</h3>
-                                    <h1>Choose your best plan</h1>
+                                    <h1>Discover your ideal maintenance plan</h1>
                                 </div>
                             </div>
                         </Col>
                         <Col lg={5}>
                             <div className="homeImageBox">
-                                <img src={box} className="img-size" alt="box" />
+                              <img src={box} className="img-size" alt="box" />
                             </div>
                         </Col>
                     </Row>

@@ -1,13 +1,20 @@
 .pricingBox {
-  padding: 3em 0em 5em;
+  padding: 1.5em 0em 5em;
   position: relative;
   top: 0;
+  text-align: center;
 }
 .pricingBox1 {
   padding: 2em 0em;
   position: relative;
   border-right: 1px solid rgb(232 229 229 / 85%);
   height: 100%;
+}
+.pricingLandingPage .homeImageBox {
+  width: unset !important;
+}
+.pricingLandingPage .homeContent .homeContentInner {
+  max-width: 90% !important;
 }
 .pricingBtnDown {
   position: absolute;
@@ -24,7 +31,7 @@
   width: 100%;
 }
 .pricingGarentyBox {
-  height: 300px;
+  height: 200px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -36,17 +43,22 @@
   font-size: 18px;
 }
 .subText {
-  font-size: 16px !important;
+  font-size: 18px !important;
 }
 .pricingTable {
   padding-top: 120px;
   padding-bottom: 60px;
 }
-.pricingTable .row .col-lg-3:nth-child(3) .pricingBox {
+.pricingTable .pricing-listing #price-1 .pricingBox {
   background: linear-gradient( 145deg, rgb(240 254 254 / 100%) 0%, rgb(2247 248 255 / 100%) 51%, rgb(254 243 255 / 100%) 100% );
+  border-radius: 20px;
 }
 .pricingBox .pricing-icon {
+  height: 140px;
   padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 .pricingBox h3 {
   font-size: 18px;
@@ -62,21 +74,194 @@
   margin: 0;
   padding: 13px 30px;
   height: 50px;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+.pricingBox .pricingchoice p:not(.righticon, .closeicon) img {
+  display: none;
+}
+.pricingBox .pricingchoice p.closeicon {
+  font-size: 0;
+  display: block;
 }
 .pricingBox1 p {
   border-top: 1px solid rgb(232 229 229 / 85%);
   margin-bottom: 0;
   height: 50px;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
   align-items: center;
 }
-.pricingTable .row .col-lg-3 {
+.pricingTable .row .col-lg-4 {
   padding: 0;
 }
 .pricingTable .btn1 {
   width: 100%;
+}
+.pricingGarentyBox .btn1 {
+  margin-bottom: 15px;
+}
+.pricing-listing .col-lg-6 {
+  padding: 0;
+}
+.pricingBox1 p .tooltip-icon {
+  margin-right: 13px;
+  display: none;
+}
+.tooltip-icon {
+  position: relative;
+}
+/* Tooltip box */
+.tooltip-icon:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.12);
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  line-height: 1.2;
+  border-radius: 6px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .6s;
+  bottom: 130%;
+  left: 0;
+  margin-left: -10px;
+  font-size: 14px;
+  visibility: hidden;
+  z-index: 1;
+}
+/* Tooltip arrow */
+.tooltip-icon:after {
+  content: "";
+  position: absolute;
+  bottom: 70%;
+  left: 40%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  opacity: 0;
+  transition: opacity .6s;
+  border-color: #f2f2f2 transparent transparent transparent;
+  visibility: hidden;
+  z-index: 0;
+}
+.tooltip-icon:hover:before, .tooltip-icon:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+.pricingBox .pricingGarentyBox .subText {
+  display: none;
+}
+.pricing-listing #price-0 .premimum-icon {
+  display: none;
+}
+.pricing-listing #price-1 .basic-icon {
+  display: none;
+}
+.pricingBox .pricing-icon img {
+  max-width: 130px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .pricing-row {
+    flex-wrap: nowrap;
+  }
+  .pricing-row .mobilepricing {
+    width: 50%;
+  }
+  .pricing-row .col-lg-8 {
+    width: 50%;
+  }
+  .pricing-listing {
+    overflow-x: scroll !important;
+    flex-wrap: nowrap !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tooltip-icon:before {
+    margin-left: 0;
+  }
+  .pricingGarentyBox {
+    padding-right: 0;
+    height: 190px;
+  }
+  .pricingTable {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .pricingBox1 p {
+    font-size: 16px;
+  }
+  .pricingBox .pricingchoice p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pricingBox .pricing-icon img {
+    max-width: 100px;
+  }
+  .pricingBox .pricing-icon {
+    height: 110px;
+  }
+  .pricingBtnDown .btn1 {
+    padding: 10px;
+  }
+  .tooltip-icon:before {
+    width: 200px;
+    padding: 10px;
+  }
+  .pricing-listing #price-0 {
+    border-right: none;
+  }
+  .pricing-row .mobilepricing {
+    width: 45%;
+  }
+  .pricing-row .col-lg-8 {
+    width: 55%;
+  }
+  .pricingBox1 p {
+    font-size: 13px;
+    padding-right: 5px;
+  }
+  .pricingBox1 {
+    padding-top: 10px;
+  }
+  .pricingBox {
+    padding-top: 10px;
+  }
+  .pricingBox .pricingchoice p {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+  .pricingGarentyBox {
+    height: 160px;
+  }
+  .pricingBox1 .flex-column {
+    padding: 0 !important;
+  }
+  .pricingBox .pricingGarentyBox {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subText {
+    font-size: 14px !important;
+  }
+  .pricingBox .pricingchoice p {
+    padding: 5px 20px;
+    height: 42px;
+  }
+  .pricingBox h4 {
+    font-size: 20px;
+  }
+  .pricingBox1 p {
+    height: 42px;
+  }
 }

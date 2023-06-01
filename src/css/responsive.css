@@ -678,8 +678,13 @@ a:hover {
     padding-bottom: 0;
   }
   .testimonialHomePage .testnomialCard .rounded-circle {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .testimonialHomePage .testnomialCard .left-circle {
+    left: -0.9em !important;
+  }
+  .testimonialHomePage .testnomialCard .right-circle {
     right: -0.9em !important;
   }
 }

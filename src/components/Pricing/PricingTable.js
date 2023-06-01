@@ -3,7 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./pricing.css";
 import { BsCheckCircleFill } from "react-icons/bs";
 import useContentful from "../../useContentful";
-import pricing_icon from "../../assets/service/logo.png";
+import pricing_basic from "../../assets/pricing/basic-price.png";
+import pricing_premimum from "../../assets/pricing/premimum-price.png";
+import pricing_right from "../../assets/pricing/price-right.png";
+import pricing_wrong from "../../assets/pricing/price-wrong.png";
+import pricing_question from "../../assets/pricing/question.png";
 
 function PricingTable() {
   const { getPricing } = useContentful();
@@ -23,8 +27,8 @@ function PricingTable() {
       <section className="pricingTable">
         <div className="wrapper">
           <Container fluid className="p-0">
-            <Row>
-              <Col lg={3} className="mb-4">
+            <Row className="pricing-row">
+              <Col lg={4} className="mb-4 mobilepricing">
                 <div className="pricingBox1">
                   <div className="pricingGarentyBox">
                     {priceGuarant?.map((item, index) => {
@@ -37,20 +41,29 @@ function PricingTable() {
                     style={{ paddingTop: "16px" }}
                   >
                     {priceText?.map((item, index) => {
-                      return <p key={index}>{item.s}</p>;
+                      return (
+                          <p key={index}><span class="tooltip-icon" data-tooltip="Tooltip Content"><img src={pricing_question} className="img-size" alt="box"/></span>{item.s}</p>
+                      );
                     })}
                   </div>
                 </div>
               </Col>
+              <Col lg={8} className="mb-4">
+              <Row className="pricing-listing">
               {priceData?.map((item, index) => {
                 return (
-                  <Col lg={3} className="mb-4" key={index}>
+                  <Col lg={6} className="mb-4" key={index} id={"price-" + index }>
                     <div className="pricingBox">
                       <div className="pricingGarentyBox">
                         <div class="pricing-icon">
                           <img
-                            src={pricing_icon}
-                            className="img-size"
+                            src={pricing_basic}
+                            className="basic-icon img-size"
+                            alt="box"
+                          />
+                          <img
+                            src={pricing_premimum}
+                            className="premimum-icon img-size"
                             alt="box"
                           />
                         </div>
@@ -61,12 +74,19 @@ function PricingTable() {
                       <div className="pricingchoice my-4">
                         {item.dataShow?.map((d, index) => {
                           return d.icon ? (
-                            <p className="" key={index}>
-                              <BsCheckCircleFill color={"green"} size={23} />
+                            <p className="righticon" key={index}>
+                              <img
+                                src={pricing_right}
+                                className="img-size"
+                              />
                             </p>
                           ) : (
-                            <p className="" key={index}>
+                            <p className={d.close} key={index}>
                               {d.text}
+                              <img
+                                src={pricing_wrong}
+                                className="img-size"
+                              />
                             </p>
                           );
                         })}
@@ -75,7 +95,8 @@ function PricingTable() {
                         <div className="btnBox">
                           <a
                             class="btn1 btn-sm undefined btn--primary btn--medium"
-                            href="/contact/"
+                            href={item.url}
+                            target="_blank"
                           >
                             <span>Buy now</span>
                           </a>
@@ -85,6 +106,8 @@ function PricingTable() {
                   </Col>
                 );
               })}
+              </Row>
+              </Col>
             </Row>
           </Container>
         </div>
@@ -98,7 +121,7 @@ function PricingTable() {
                   <p className="marquee">
                     <span>
                       eCommerce website &nbsp;&nbsp;&nbsp;&nbsp; |
-                      &nbsp;&nbsp;&nbsp;&nbsp; Blog website
+                      &nbsp;&nbsp;&nbsp;&nbsp; Blog
                       &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;
                       Portfolio website &nbsp;&nbsp;&nbsp;&nbsp; |
                       &nbsp;&nbsp;&nbsp;&nbsp; Event website
