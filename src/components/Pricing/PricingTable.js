@@ -77,6 +77,7 @@ function PricingTable() {
                               <img
                                 src={pricing_right}
                                 className="img-size"
+                                alt="Right Icon"
                               />
                             </p>
                           ) : (
@@ -85,6 +86,7 @@ function PricingTable() {
                               <img
                                 src={pricing_wrong}
                                 className="img-size"
+                                alt="Close Icon"
                               />
                             </p>
                           );
