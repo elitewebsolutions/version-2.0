@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./pricing.css";
-import { BsCheckCircleFill } from "react-icons/bs";
 import useContentful from "../../useContentful";
 import pricing_basic from "../../assets/pricing/basic-price.png";
 import pricing_premimum from "../../assets/pricing/premimum-price.png";
@@ -59,12 +58,12 @@ function PricingTable() {
                           <img
                             src={pricing_basic}
                             className="basic-icon img-size"
-                            alt="box"
+                            alt="Basic Plan"
                           />
                           <img
                             src={pricing_premimum}
                             className="premimum-icon img-size"
-                            alt="box"
+                            alt="Premimum Plan"
                           />
                         </div>
                         <h3>{item.title}</h3>
@@ -97,6 +96,7 @@ function PricingTable() {
                             class="btn1 btn-sm undefined btn--primary btn--medium"
                             href={item.url}
                             target="_blank"
+                            rel="noreferrer"
                           >
                             <span>Buy now</span>
                           </a>
