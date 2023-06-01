@@ -36,7 +36,7 @@ function PricingTable() {
                   </div>
 
                   <div
-                    className="my-4 d-flex flex-column "
+                    className="d-flex flex-column"
                     style={{ paddingTop: "16px" }}
                   >
                     {priceText?.map((item, index) => {
