@@ -85,7 +85,7 @@ function Web({ toggle, handleClick }) {
                   className="btn1 btn-sm btn--primary btn--medium"
                   onClick={() => handleShow()}
                 >
-                  <span>Get Free Website Audit</span>
+                  <span>Get A Free Website Audit</span>
                 </button>
               </div>
             </div>

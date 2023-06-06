@@ -100,7 +100,7 @@ function PricingTable() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <span>Buy now</span>
+                            <span>Get Started</span>
                           </a>
                         </div>
                       </div>
