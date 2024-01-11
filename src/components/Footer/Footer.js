@@ -117,7 +117,7 @@ function Footer() {
                   <h5>Contact Us</h5>
                   <div className="mt-4 d-flex flex-column gap-3">
                              <p className="email-footer">
-                    <a href="tel:+1(615)6320630">+1 (615) 6320 630</a>
+                    <a href="tel:+16156320630">+1 (615) 6320 630</a>
                     </p>
                     <p className="email-footer">
                       <a href="mailto:contact@elitewebsolutions.co">
@@ -129,7 +129,7 @@ function Footer() {
                       Huntington Drive Apt E4, Murfreesboro 37130, Tennessee, US</a>
                     </p>
                     <p className="location-footer">
-                      <a href="https://www.google.com/maps/search/1306,+Shivalik+Shilp,+Iskcon+Cross+Road,+S.G+Highway,+Ahmedabad,+Gujarat%C2%A0-%C2%A0380015/@23.0275836,72.4940981,16z/data=!3m1!4b1?entry=ttu" target="_blacnk" rel="noopener noreferrer">1306, Shivalik Shilp, Iskcon Cross Road, S.G Highway, Ahmedabad, Gujarat - 380015</a>
+                      <a href="https://www.google.com/maps/dir//Shivalik+Shilp,+Iskcon+Cross+Rd,+Sanidhya,+Ahmedabad,+Gujarat+380015/@23.027029,72.5037668,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x395e9b398e5880f1:0x32614b29d1226274!2m2!1d72.5063417!2d23.0270241!3e0?entry=ttu" target="_blacnk" rel="noopener noreferrer">1306, Shivalik Shilp, Iskcon Cross Road, S.G Highway, Ahmedabad, Gujarat - 380015</a>
                     </p>
                   </div>
                 </div>
