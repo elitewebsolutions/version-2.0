@@ -116,7 +116,7 @@ function Footer() {
                 <div className="footerExplore footercontact">
                   <h5>Contact Us</h5>
                   <div className="mt-4 d-flex flex-column gap-3">
-                             <p className="phone-footer">
+                             <p className="email-footer">
                     <a href="tel:+1(615)6320630">+1 (615) 6320 630</a>
                     </p>
                     <p className="email-footer">
