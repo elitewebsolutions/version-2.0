@@ -121,7 +121,7 @@ function Footer() {
                     </p>
                     <p className="email-footer">
                       <a href="mailto:contact@elitewebsolutions.co">
-                        Contact@elitewebsolutions.co
+                        contact@elitewebsolutions.co
                       </a>
                     </p>
                     <p className="location-footer">
