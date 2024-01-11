@@ -116,6 +116,9 @@ function Footer() {
                 <div className="footerExplore footercontact">
                   <h5>Contact Us</h5>
                   <div className="mt-4 d-flex flex-column gap-3">
+                             <p className="phone-footer">
+                    <a href="tel:+1(615)6320630">+1 (615) 6320 630</a>
+                    </p>
                     <p className="email-footer">
                       <a href="mailto:contact@elitewebsolutions.co">
                         Contact@elitewebsolutions.co
@@ -126,7 +129,7 @@ function Footer() {
                       Huntington Drive Apt E4, Murfreesboro 37130, Tennessee, US</a>
                     </p>
                     <p className="location-footer">
-                      <a href="https://www.google.com/maps/dir//elite+web+solutions+software+company+in+ahmedabad/@23.089197,72.4948988,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x395e833096e5c6cf:0x4533b874dc80139c!2m2!1d72.5649392!2d23.0892124" target="_blacnk" rel="noopener noreferrer">327, S.V. Square, Opp. Savan Bungalows, New Ranip, 380081 Ahmedabad, IND</a>
+                      <a href="https://www.google.com/maps/search/1306,+Shivalik+Shilp,+Iskcon+Cross+Road,+S.G+Highway,+Ahmedabad,+Gujarat%C2%A0-%C2%A0380015/@23.0275836,72.4940981,16z/data=!3m1!4b1?entry=ttu" target="_blacnk" rel="noopener noreferrer">1306, Shivalik Shilp, Iskcon Cross Road, S.G Highway, Ahmedabad, Gujarat - 380015</a>
                     </p>
                   </div>
                 </div>
@@ -136,7 +139,7 @@ function Footer() {
 
           <div className="mainFooter_copyright">
             <p>
-              Copyright 2023 all rights reserved by{" "}
+              Copyright 2024 all rights reserved by{" "}
               <strong>Elite Web Solutions</strong>
             </p>
           </div>
