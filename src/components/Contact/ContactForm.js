@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import emailjs from "@emailjs/browser";
 import "./contact.css";
 import com from "../../assets/contact/contact-form-img.png";
 import geticon from "../../assets/contact/get-in-touch-icon.png";
@@ -8,33 +7,8 @@ import mail from "../../assets/contact/mail.png";
 import facebook from "../../assets/contact/facebook.png";
 import instagram from "../../assets/contact/instagram.png";
 import linkedin from "../../assets/contact/linkedin.png";
-import { Button } from "../Button/Button";
-import { showToastError, showToastSuccess } from "../../utils/constant";
 
 function ContactForm() {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_b5mx6bt",
-        "template_s7yf2ep",
-        form.current,
-        "Ue8jZziXKgOW9FHhQ"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          showToastSuccess("successfully send message!");
-          e.target.reset();
-        },
-        (error) => {
-          showToastError("something went wrong!");
-          console.log(error.text);
-        }
-      );
-  };
-
   return (
     <section className="ContactFormPage">
       <div className="wrapper">
@@ -100,85 +74,32 @@ function ContactForm() {
                     </p>
                   </div>
 
-                  <div className="rightPartContact">
-                    <div className="contactForm">
-                      <form
-                        ref={form}
-                        onSubmit={sendEmail}
-                        className="formControl"
-                      >
-                        <div className="halfContact">
-                          <input
-                            required={true}
-                            className="halfWidth"
-                            type="text"
-                            placeholder="First Name"
-                            name="user_name"
-                          />
-                          <input
-                            required={true}
-                            className="halfWidth"
-                            type="text"
-                            placeholder="Last Name"
-                            name="last_name"
-                          />
-                          <input
-                            required={true}
-                            className="halfWidth"
-                            type="text"
-                            placeholder="Email ID"
-                            name="user_email"
-                          />
-                          <input
-                            required={true}
-                            className="halfWidth"
-                            type="text"
-                            placeholder="Phone No"
-                            name="user_phone"
-                          />
+                  <>
+                    <iframe
+                      src="https://link.axeplatform.com/widget/form/Rgkttw8RZqNc03npX4kp"
+                      style={{
+                        width: "100%",
+                        marginTop: "50px",
+                        height: "calc(100vh - 150px)",
+                        border: "none",
+                        borderRadius: "10px",
+                      }}
+                      id="inline-Rgkttw8RZqNc03npX4kp"
+                      data-layout="{'id':'INLINE'}"
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="Contact Us Form"
+                      data-layout-iframe-id="inline-Rgkttw8RZqNc03npX4kp"
+                      data-form-id="Rgkttw8RZqNc03npX4kp"
+                      title="Contact Us Form"
+                    ></iframe>
 
-                          <select
-                            className="fullWidth"
-                            name="subject"
-                            required={true}
-                          >
-                            <option value="">Select Your Service</option>
-                            <option value="WordPress Development">
-                              WordPress Development
-                            </option>
-                            <option value="Learndash LMS Development">
-                              Learndash LMS Development
-                            </option>
-                            <option value="Web Development">
-                              Web Development
-                            </option>
-                            <option value="Web Maintenance">
-                              Web Maintenance
-                            </option>
-                            <option value="Web Hosting">Web Hosting</option>
-                            <option value="UI/UX Design">UI/UX Design</option>
-                            <option value="Email & Newsletter Designs">
-                              Email & Newsletter Designs
-                            </option>
-                            <option value="Search Engine Optimization">
-                              Search Engine Optimization
-                            </option>
-                            <option value="Other">Other</option>
-                          </select>
-                          <textarea
-                            required={true}
-                            className="fullWidth"
-                            placeholder="Message"
-                            name="message"
-                          ></textarea>
-                        </div>
-
-                        <div className="sendMessage text-center mt-5">
-                          <Button type="submit"><span>Submit</span></Button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+                    <script src="https://link.axeplatform.com/js/form_embed.js"></script>
+                  </>
                 </Row>
               </div>
             </Col>
