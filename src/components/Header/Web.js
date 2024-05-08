@@ -18,7 +18,6 @@ function Web({ toggle, handleClick }) {
   window.addEventListener("scroll", onScrollChange);
   // Filter out the "Contact" link if onMobile is true
   const filteredMenuItems = MenuItems.filter((item) => !item.onMobile);
-  console.log(filteredMenuItems);
 
   return (
     <>
