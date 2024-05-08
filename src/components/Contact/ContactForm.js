@@ -109,7 +109,9 @@ function ContactForm() {
           </Row>
         </Container>
       </div>
-   <button style={{ display: "none" }}></button>
+  <div style={{ display: "none" }}>
+        <Button></Button>
+      </div>
     </section>
   );
 }
