@@ -3,9 +3,7 @@ import "./header.css";
 import { MenuItems } from "./MenuItems";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
-import { Container, Modal } from "react-bootstrap";
-import audit_img from "../../assets/audit-website.png";
+import { NavLink, Link } from "react-router-dom";
 
 function Web({ toggle, handleClick }) {
   const [scroll, setScroll] = useState(false);
@@ -17,11 +15,10 @@ function Web({ toggle, handleClick }) {
     }
   };
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   window.addEventListener("scroll", onScrollChange);
+  // Filter out the "Contact" link if onMobile is true
+  const filteredMenuItems = MenuItems.filter((item) => !item.onMobile);
+  console.log(filteredMenuItems);
 
   return (
     <>
@@ -49,7 +46,7 @@ function Web({ toggle, handleClick }) {
               </div>
 
               <ul className={toggle ? "nav-menu active" : "nav-menu"}>
-                {MenuItems.map((item, index) => {
+                {filteredMenuItems.map((item, index) => {
                   return (
                     <li key={index} className={item.sMenu ? "submenu" : ""}>
                       <NavLink to={item.url} className={item.cName}>
@@ -57,19 +54,18 @@ function Web({ toggle, handleClick }) {
                       </NavLink>
 
                       {item.sMenu ? (
-                          <ul className="web">
-                            {item.sMenu.map((itemsub, index1) => (
-                              <li key={index1}>
-                                <NavLink
-                                  to={itemsub.url}
-                                  className={itemsub.cName}
-                                >
-                                  {itemsub.title}
-                                </NavLink>
-                              </li>
-                            ))}
-                          </ul>
-
+                        <ul className="web">
+                          {item.sMenu.map((itemsub, index1) => (
+                            <li key={index1}>
+                              <NavLink
+                                to={itemsub.url}
+                                className={itemsub.cName}
+                              >
+                                {itemsub.title}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
                       ) : (
                         ""
                       )}
@@ -77,49 +73,21 @@ function Web({ toggle, handleClick }) {
                   );
                 })}
               </ul>
-
-              <div className="header-btn">
-                <button
-                  buttonSize="btn--medium"
-                  btnHeader="header-btn-none"
-                  className="btn1 btn-sm btn--primary btn--medium"
-                  onClick={() => handleShow()}
-                >
-                  <span>Get A Free Website Audit</span>
-                </button>
-              </div>
+              <Link to="/contact">
+                <div className="header-btn">
+                  <button
+                    buttonSize="btn--medium"
+                    btnHeader="header-btn-none"
+                    className="btn1 btn-sm btn--primary btn--medium"
+                  >
+                    <span>Contact</span>
+                  </button>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </nav>
-
-      {/*Model */}
-      <Modal
-        show={show}
-        onHide={handleClose}
-        animation={false}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>
-            <img src={audit_img} alt="logo" />
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Container fluid className="p-0">
-            <iframe
-              src="https://64601ed95d79021fa898b1a9--luminous-taiyaki-5bf7b0.netlify.app/"
-              title="audit"
-              frameborder="0"
-              width={"100%"}
-              height={330}
-            ></iframe>
-          </Container>
-        </Modal.Body>
-        <Modal.Footer></Modal.Footer>
-      </Modal>
     </>
   );
 }
