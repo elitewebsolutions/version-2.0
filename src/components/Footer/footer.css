@@ -99,7 +99,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+#custom-link-dissable{
+  pointer-events: none;
+}
 @media screen and (max-width: 1024px) {
   .mainFooter_nav1 {
     padding-bottom: 30px;
