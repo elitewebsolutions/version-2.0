@@ -126,7 +126,7 @@ function Footer() {
                     </p>
                     <p className="location-footer">
                       <a id="custom-link-dissable" href="https://www.google.com/maps/dir//Huntington+Dr,+Murfreesboro,+TN+37130/@35.8632245,-86.3779161,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8864077f9c19aa03:0x3c7dc50919704dd1!2m2!1d-86.3779161!2d35.8632245" target="_blank" rel="noopener noreferrer">
-                      2615 Medical Center Parkway Suite 1560, Murfreesboro Tennessee, US - 37129</a>
+                      2615, Medical Center, Parkway Suite 1560, Murfreesboro Tennessee, US - 37129</a>
                     </p>
                     <p className="location-footer">
                       <a href="https://www.google.com/maps/dir//Shivalik+Shilp,+Iskcon+Cross+Rd,+Sanidhya,+Ahmedabad,+Gujarat+380015/@23.027029,72.5037668,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x395e9b398e5880f1:0x32614b29d1226274!2m2!1d72.5063417!2d23.0270241!3e0?entry=ttu" target="_blacnk" rel="noopener noreferrer">1306, Shivalik Shilp, Iskcon Cross Road, S.G Highway, Ahmedabad, Gujarat - 380015</a>
