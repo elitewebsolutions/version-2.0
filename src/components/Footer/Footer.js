@@ -129,7 +129,7 @@ function Footer() {
                       2615, Medical Center, Parkway Suite 1560, Murfreesboro Tennessee, US - 37129</a>
                     </p>
                     <p className="location-footer">
-                      <a href="https://www.google.com/maps/dir//Shivalik+Shilp,+Iskcon+Cross+Rd,+Sanidhya,+Ahmedabad,+Gujarat+380015/@23.027029,72.5037668,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x395e9b398e5880f1:0x32614b29d1226274!2m2!1d72.5063417!2d23.0270241!3e0?entry=ttu" target="_blacnk" rel="noopener noreferrer">1306, Shivalik Shilp, Iskcon Cross Road, S.G Highway, Ahmedabad, Gujarat - 380015</a>
+                      <a href="https://www.google.com/maps/dir//Shivalik+Shilp,+Iskcon+Cross+Rd,+Sanidhya,+Ahmedabad,+Gujarat+380015/@23.027029,72.5037668,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x395e9b398e5880f1:0x32614b29d1226274!2m2!1d72.5063417!2d23.0270241!3e0?entry=ttu" target="_blacnk" rel="noopener noreferrer">1111, Shivalik Shilp, Iskcon Cross Road, S.G Highway, Ahmedabad, Gujarat - 380015</a>
                     </p>
                   </div>
                 </div>
